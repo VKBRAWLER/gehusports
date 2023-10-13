@@ -1,0 +1,32 @@
+[
+    {
+        "Name": "Football",
+        "Title": "Football",
+        "Cimage": "https://cdn.wallpapersafari.com/3/7/SFe72B.jpg",
+        "Sdate": 20,
+        "UPCOMING": 1,
+        "ONGOING": 0,
+        "COMPLETED": 0,
+        "TEnrolled": 21
+    },
+    {
+        "Name": "Basketball",
+        "Title": "Basketball",
+        "Cimage": "https://hdqwalls.com/wallpapers/basketball-hd.jpg",
+        "Sdate": 20,
+        "UPCOMING": 1,
+        "ONGOING": 0,
+        "COMPLETED": 0,
+        "TEnrolled": 22
+    },
+    {
+        "Name": "Cricket",
+        "Title": "Cricket",
+        "Cimage": "https://wallpaperdig.com/wp-content/uploads/2021/02/XDCFVBGNHJM.jpg",
+        "Sdate": 20,
+        "UPCOMING": 1,
+        "ONGOING": 0,
+        "COMPLETED": 0,
+        "TEnrolled": 13
+    }
+]
