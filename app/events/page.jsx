@@ -1,5 +1,6 @@
 import React from 'react'
 import events from '@data/json/events.json'
+import Timer from '@components/Timer'
 const EventsPage = () => {
     return (
     <>
@@ -21,13 +22,11 @@ const EventsPage = () => {
                 <div>
                     <h1 className='text-2xl font-bold'>{i.Title} Tournament</h1>
                     <section className='w-3/4 float-left'>
-                    <p className='text-sm'>Time Remaining: </p>
-                    <p>20hr 30min 1sec</p>
+                        <p className='text-sm'>Time Remaining: </p>
+                        <Timer targetTime={i.Sdate} />
                     </section>
                     <section className='w-1/4 float-right'>
-                    <button className='bg-red-800 p-2 rounded-xl'>
-                        Register
-                    </button>
+                        <button className='bg-red-800 p-2 rounded-xl'>Register</button>
                     </section>
                 </div>
             </div>
