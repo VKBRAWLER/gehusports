@@ -1,17 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Roboto_Slab;
+    src: url('/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf');
+}
+body {
+    background-image: url('https://www.gehu.ac.in/assets/GEHU-BTL-b80ef66e.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Roboto_Slab;
+    
+}
 main {
     width: 100%;
     height: calc(100vh - 5rem);
 }
+.texts {
+    text-shadow: 4px 4px 5px white;
+}
 .box {
-    width: 300px;
-    height: 80%;
-    background-color: blue;
+    width: 270px;
+    /* height: 80%; */
+    aspect-ratio: 9 / 16;
     transition-duration: 500ms;
 }
-.box:hover {
+.boxani{
     transform: scale(1.25) rotateY(360deg);
 }
 .boss {
