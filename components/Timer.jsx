@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import calculateTimeLeft from "@app/func/CalculateTimeLeft";
+import calculateTimeLeft from "@func/CalculateTimeLeft";
 const Timer = (props) => {
   const [targetTime] = useState(new Date(props.targetTime));
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetTime));

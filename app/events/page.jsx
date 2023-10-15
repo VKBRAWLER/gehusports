@@ -4,18 +4,18 @@ import Timer from '@components/Timer'
 const EventsPage = () => {
     return (
     <>
-    <main className='bg-blue-500'>
-        <section className='w-full bg-blue-500 p-2 h-20 flex items-center'>
+    <main>
+        <section className='w-full p-2 h-20 flex items-center '>
             <ul className='flex gap-6'>
                 <li className='text-3xl font-bold text-white hover:underline cursor-pointer'>UPCOMING</li>
                 <li className='text-3xl font-bold text-white hover:underline cursor-pointer'>ONGOING</li>
                 <li className='text-3xl font-bold text-white hover:underline cursor-pointer'>COMPLETED</li>
             </ul>
         </section>
-        <section className='w-full bg-blue-400 p-2 flex flex-wrap justify-center gap-3'>
+        <section className='w-full bg-white p-2 flex flex-wrap justify-center gap-3'>
             {events.filter((i)=> i.UPCOMING).map((i) => {
                 return(
-                    <div key={i.Name} className='flex flex-col justify-center items-center p-5 w-80 h-72 rounded-2xl bg-blue-500'>
+                    <div key={i.Name} className='flex flex-col justify-center items-center p-5 w-80 h-72 rounded-2xl '>
                 <div className=' w-10/12 h-40'>
                 <Suspense fallback={<p>Loading...</p>}>
                     <img className='w-full h-full' src={i.Cimage} alt="" />
