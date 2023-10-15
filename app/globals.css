@@ -20,7 +20,7 @@ main {
     height: calc(100vh - 5rem);
 }
 .texts {
-    text-shadow: 4px 4px 5px white;
+    text-shadow: 0px 0px 7px white;
 }
 .box {
     width: 270px;
