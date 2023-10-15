@@ -34,22 +34,33 @@ main {
 .boss {
     width: 300px;
     height:400px;
-    background-color: blue;
     transition-duration: 500ms;
-    max-width: 98vw;
 }
-.boss:nth-child(1) {
-    background-color: aliceblue;
-    width: 450px;
-    height: 500px;
-}
+
 @media screen and (min-width: 1100px) {
     .order-n {
         order: 3;
+        width: 450px;
+        height: 500px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .boss:nth-child(1) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .boss:nth-child(1) > img{
+        width: 400px;
+    }
+    .boss:nth-child(1) > h4{
+        background-color: transparent;
     }
 }
 .circle {
     height: 90%;
     width: 13rem;
     background-color: #fff;
+    border-radius: 200px;
 }
