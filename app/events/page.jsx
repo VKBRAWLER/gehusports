@@ -1,19 +1,12 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react'
-import events from '@data/json/events.json'
 import { useSearchParams } from 'next/navigation';
 import SportsList from '@components/SportsList';
 import Link from 'next/link';
 const EventsPage = () => {
-    const directing = () => { if (!(useSearchParams().get('status'))) { document.getElementById('direct').click()} }
-    useEffect(() => {
-    //   directing();
-    }, [])
-    
     return (
     <>
     <main>
-        <p className='text-center text-xl'>"status": {useSearchParams().get('status')}, "filter": {useSearchParams().get('filter')}</p>
+        {/* <p className='text-center text-xl'>"status": {useSearchParams().get('status')}, "filter": {useSearchParams().get('filter')}</p> */}
         <section className='w-full px-10 relative'>
             <ul className='flex gap-6 float-left mb-3'>
                 <Link id='direct' href={'/events?status=UPCOMING'} className='text-3xl font-bold text-white hover:underline cursor-pointer border-b-8'>UPCOMING</Link>
@@ -29,7 +22,7 @@ const EventsPage = () => {
             </ul>
             </details>
         </section>
-        <SportsList events={events} status={useSearchParams().get('status')} filter={useSearchParams().get('filter')} />
+        <SportsList status={useSearchParams().get('status')} filter={useSearchParams().get('filter')} />
     </main>
     </>
   )

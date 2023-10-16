@@ -1,8 +1,9 @@
 import React from 'react';
 import { Suspense } from 'react';
 import Timer from './Timer';
+import events from '@data/json/events.json'
 const SportsList = (params) => {
-  let SportsArray = params.events.filter((i)=> i[params.status]);
+  let SportsArray = events.filter((i)=> i[params.status]);
   if (params.filter) { SportsArray = SportsArray.filter((i)=> (params.filter[0] == 'e'))}
     return (
     <section className='w-full p-2 flex flex-wrap justify-center gap-3'>
