@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <main>
     <div className='absolute top-0 w-full h-screen flex justify-center items-center overflow-hidden'><video className='z-0 max-w-none w-auto h-full' src={valo} autoPlay muted loop/></div>
-      <h1 className='w-full text-left font-extrabold text-3xl texts relative z-10'>Graphic Era Hill University Presents...</h1>
+      <h1 className='w-full text-center font-extrabold text-5xl texts relative z-10'>Graphic Era Hill University Presents...</h1>
       <h1 className='w-full text-center font-extrabold text-5xl texts relative z-10'>Endurance Club</h1>
       <section className="mb-20 relative w-full max-h-screen flex justify-evenly items-center h-[550px] overflow-hidden">
         <div className="w-1/3 flex justify-center items-center h-full relative z-10 group"><img className="box opacity-30 border-blue-500 border-2 group-hover:scale-125 group-hover:opacity-100" src='https://cdn.discordapp.com/attachments/1162745234011193385/1162750045867745372/45704660-illustration-of-volleyball-player-playing-on-abstract-background.jpg?ex=653d125d&is=652a9d5d&hm=ef35508d72b89b690fb3ea5c844df66f87062aaf3e169e8dcd71f83731ba163a&'/><h4 className='w-full text-center bottom-10 absolute text-2xl text-white font-extrabold group-hover:text-black group-hover:bottom-40 duration-500 group-hover:text-3xl'>Outdoor Sports</h4></div>

@@ -1,7 +1,16 @@
-import React, { Suspense } from 'react'
+"use client";
+import React, { Suspense, useState } from 'react'
 import events from '@data/json/events.json'
 import Timer from '@components/Timer'
+import { useSearchParams } from 'next/navigation';
 const EventsPage = () => {
+    const [searchParams, setSearchParams] = useState(useSearchParams())
+    const [status, setStatus] = useState(searchParams.get('status'));
+    const [filter, setFilter] = useState(searchParams.get('filter'));
+    const UpdateParams = () => {
+        // setSearchParams(new URLSearchParams({ status: status, filter: filter }))
+    }
+    console.log({"status": status, "filter": filter})
     return (
     <>
     <main>
@@ -33,7 +42,7 @@ const EventsPage = () => {
                     <h1 className='text-2xl font-bold'>{i.Title} Tournament</h1>
                     <section className='w-3/4 float-left'>
                         <p className='text-sm'>Time Remaining: </p>
-                        <Timer targetTime={i.Sdate} />
+                        {/* <Timer targetTime={i.Sdate} /> */}
                     </section>
                     <section className='w-1/4 float-right'>
                         <button className='bg-blue-400 p-2 rounded-xl'>Register</button>
