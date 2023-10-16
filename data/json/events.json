@@ -7,7 +7,7 @@
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TEnrolled": 21
+        "TAG": "o"
     },
     {
         "Name": "Basketball",
@@ -17,7 +17,7 @@
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TEnrolled": 22
+        "TAG": "o"
     },
     {
         "Name": "Cricket",
@@ -27,6 +27,46 @@
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TEnrolled": 13
+        "TAG": "o"
+    },
+    {
+        "Name": "Chess",
+        "Title": "Chess",
+        "Cimage": "https://cdn.wallpapersafari.com/3/7/SFe72B.jpg",
+        "Sdate": "2023-10-17T11:25:00",
+        "UPCOMING": 0,
+        "ONGOING": 1,
+        "COMPLETED": 0,
+        "TAG": "i"
+    },
+    {
+        "Name": "Valorant",
+        "Title": "Valorant",
+        "Cimage": "https://hdqwalls.com/wallpapers/basketball-hd.jpg",
+        "Sdate": "2023-10-17T11:25:00",
+        "UPCOMING": 0,
+        "ONGOING": 1,
+        "COMPLETED": 0,
+        "TAG": "e"
+    },
+    {
+        "Name": "BGMI",
+        "Title": "BGMI",
+        "Cimage": "https://wallpaperdig.com/wp-content/uploads/2021/02/XDCFVBGNHJM.jpg",
+        "Sdate": "2023-10-17T11:25:00",
+        "UPCOMING": 0,
+        "ONGOING": 0,
+        "COMPLETED": 1,
+        "TAG": "e"
+    },
+    {
+        "Name": "Carrom",
+        "Title": "Carrom",
+        "Cimage": "https://cdn.wallpapersafari.com/3/7/SFe72B.jpg",
+        "Sdate": "2023-10-17T11:25:00",
+        "UPCOMING": 0,
+        "ONGOING": 0,
+        "COMPLETED": 1,
+        "TAG": "i"
     }
 ]
