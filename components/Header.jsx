@@ -9,7 +9,7 @@ const Header = () => {
         <ul className='flex gap-[20vw] text-xl'>
           <Link href={'/events'} className='texts'>Events</Link>
           <li className='texts'>About</li>
-          <li className='texts'>Register</li>
+          <Link href={'/register'}  className='texts'>Register</Link>
         </ul>
       </nav>
     </header>

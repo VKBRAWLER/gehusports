@@ -17,7 +17,7 @@ body {
 }
 main {
     width: 100%;
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 6rem);
 }
 .texts {
     text-shadow: 0px 0px 7px white;
@@ -27,6 +27,7 @@ main {
     /* height: 80%; */
     aspect-ratio: 9 / 16;
     transition-duration: 500ms;
+    box-shadow: 10px 10px 3px rgb(0, 0, 0, .6);
 }
 .boxani{
     transform: scale(1.25) rotateY(360deg);
@@ -35,6 +36,7 @@ main {
     width: 300px;
     height:400px;
     transition-duration: 500ms;
+    box-shadow: 10px 10px 3px rgb(0, 0, 0, .6);
 }
 
 @media screen and (min-width: 1100px) {
@@ -58,9 +60,9 @@ main {
         background-color: transparent;
     }
 }
-.circle {
-    height: 90%;
-    width: 13rem;
-    background-color: #fff;
-    border-radius: 200px;
+#form-box {
+    box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
+}
+.form-box {
+    box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
 }
