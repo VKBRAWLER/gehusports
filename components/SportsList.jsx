@@ -4,7 +4,8 @@ import Timer from './Timer';
 import events from '@data/json/events.json'
 const SportsList = (params) => {
   let SportsArray = events.filter((i)=> i[params.status]);
-  if (params.filter) { SportsArray = SportsArray.filter((i)=> (params.filter[0] == 'e'))}
+  if (params.filter) { SportsArray = SportsArray.filter((i)=> (params.filter[0] == i.TAG))}
+  if (SportsArray.length > 0) {
     return (
     <section className='w-full p-2 flex flex-wrap justify-center gap-3'>
         {SportsArray.map((i) => {
@@ -30,6 +31,16 @@ const SportsList = (params) => {
         })}
     </section>
   )
+}
+    else {
+        return (
+            <section className='w-full p-2 flex flex-wrap justify-center gap-3'>
+                {params.filter && <p className='text-2xl font-bold'>No {params.filter} events found in {params.status} events</p>
+                || <p className='text-2xl font-bold'>No {params.status} events found</p>
+                }
+            </section>
+        )
+    }
 }
 
 export default SportsList
