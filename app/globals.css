@@ -20,14 +20,13 @@ main {
     height: calc(100vh - 6rem);
 }
 .texts {
-    text-shadow: 0px 0px 7px white;
+    text-shadow: 5px 5px 3px white;
 }
 .box {
     width: 270px;
     /* height: 80%; */
-    aspect-ratio: 9 / 16;
     transition-duration: 500ms;
-    box-shadow: 10px 10px 3px rgb(0, 0, 0, .6);
+    box-shadow: 10px 10px 6px rgba(255, 255, 255, 0.8);
 }
 .boxani{
     transform: scale(1.25) rotateY(360deg);
@@ -65,4 +64,7 @@ main {
 }
 .form-box {
     box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
+}
+.mem {
+    box-shadow: 8px 10px 3px rgb(0, 0, 0, 0.8);
 }

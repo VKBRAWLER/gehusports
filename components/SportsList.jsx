@@ -10,8 +10,8 @@ const SportsList = (params) => {
     <section className='w-full p-2 flex flex-wrap justify-center gap-3'>
         {SportsArray.map((i) => {
             return(
-                <div key={i.Name} className='flex flex-col justify-center items-center p-5 w-80 h-72 rounded-2xl bg-white bg-opacity-70 hover:bg-opacity-100 border-2 border-black'>
-                    <div className=' w-10/12 h-40'>
+                <div key={i.Name} className='flex flex-col justify-center items-center p-5 w-80 rounded-2xl bg-white bg-opacity-70 hover:bg-opacity-100 border-2 border-black'>
+                    <div className=' w-10/12'>
                     <Suspense fallback={<p>Loading...</p>}>
                         <img className='w-full h-full' src={i.Cimage} alt="" />
                     </Suspense>
