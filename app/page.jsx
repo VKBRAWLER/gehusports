@@ -9,7 +9,7 @@ const HomePage = () => {
       <div className='top-0 bottom-0 left-0 right-0 absolute z-0 flex justify-center items-center overflow-hidden'><video className='xl:w-full h-full xl:h-auto w-auto max-w-none' src={drone} autoPlay muted loop/></div>
       <h1 className='w-full text-center font-extrabold text-3xl lg:text-5xl texts relative z-10'>Graphic Era Hill University Presents...<br/>Endurance Cup</h1>
       {/* <h1 className='w-full text-center font-extrabold text-5xl texts relative z-10'>Endurance Cup</h1> */}
-      <section className="my-10 relative w-full max-h-screen flex justify-evenly items-center bg-black h-96">
+      <section className="my-10 relative w-full max-h-screen flex justify-evenly items-center h-96">
         <div className="w-1/3 flex justify-center items-center h-full relative z-10 group">
           <img className="box opacity-75 border-blue-500 border-2 group-hover:scale-125 group-hover:opacity-100" src='https://media.discordapp.net/attachments/1163848747504124019/1163850539352735845/outdoor1.png?ex=65411347&is=652e9e47&hm=8db7b56df9daea89239b94249c654771fbab04efad41a76d2e28939d17bd5231&=&width=553&height=662'/>
           <h4 className='w-full text-center texts bottom-10 absolute text-2xl text-white font-extrabold group-hover:text-black group-hover:bottom-40 duration-500 group-hover:text-3xl'>Outdoor Sports</h4>

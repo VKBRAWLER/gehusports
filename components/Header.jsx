@@ -8,8 +8,8 @@ const Header = () => {
       <nav>
         <ul className='flex justify-evenly items-center h-full text-3xl'>
             <Link className href='/'>Home</Link>
-            <Link className href='/about'>About</Link>
-            <Link className href='/contact'>Contact</Link>
+            <Link className href='/events'>Event</Link>
+            <Link className href='/register'>Register</Link>
         </ul>
       </nav>
       <img className='p-2' src={glogo} alt="" />
