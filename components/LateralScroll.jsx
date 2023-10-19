@@ -9,7 +9,6 @@ const LateralScroll = () => {
     <p className={'text-center'}>Web-Developer</p>
     </div>);
   }
-  console.log(divs);
   return (
     <section className="my-20 px-10 flex justify-center h-80 gap-10 overflow-x-scroll flex-wrap flex-col">
       {divs}

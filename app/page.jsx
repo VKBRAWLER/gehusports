@@ -2,8 +2,8 @@ import LateralScroll from '@components/LateralScroll';
 import React from 'react'
 const HomePage = () => {
   const facimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEwfjJEZno_M_rTutJHcl9BTTb8wIHfXZ2z3iNjmvZ&s";
-  const valo = "https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltee455c2e719bb8b9/6494cf1ef1585c219370578e/Valorant_Deadlock_Homepage_Desktop.mp4";
-  const drone = '/video/drone.mp4';
+  const drone = 'https://cdn.discordapp.com/attachments/1162451241872412902/1164445349147054131/drone.mp4?ex=65433d3d&is=6530c83d&hm=3b8cb22447eed598759621bddfc8097b8627a24d897623c3c2e172c1bc431301&';
+  const dicimg = 'https://cdn.discordapp.com/attachments/1163848747504124019/1164445807332831272/mc.jpg?ex=65433daa&is=6530c8aa&hm=02f30612bb298b5cf75fa14c2553e13b99f94793547b009976b2f8016848098e&';
   return (
     <main>
       <div className='top-0 bottom-0 left-0 right-0 absolute z-0 flex justify-center items-center overflow-hidden'><video className='xl:w-full h-full xl:h-auto w-auto max-w-none' src={drone} autoPlay muted loop/></div>
@@ -27,7 +27,7 @@ const HomePage = () => {
       <section className="my-10 w-full flex justify-evenly items-center min-h-[600px] flex-wrap">
         <div className="boss relative order-n group overflow-hidden">
           <p className='text-white absolute -bottom-44 p-2 group-hover:bottom-14 duration-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi a aliquid explicabo eaque? Vero dignissimos officia nulla laudantium id nesciunt laboriosam facere adipisci amet. Ducimus, deleniti. Ea provident perspiciatis earum.</p>
-          <img src={'/images/mc.jpg'} alt="" className="lg:w-full h-full max-w-full" />
+          <img src={dicimg} alt="" className="lg:w-full h-full max-w-full" />
           <h4 className='w-full text-center bottom-3 absolute text-3xl font-semibold bg-white'>Dr. M. C. Lohani</h4>
         </div>
         <div className="boss relative order-2">
