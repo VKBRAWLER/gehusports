@@ -17,10 +17,16 @@ body {
 }
 main {
     width: 100%;
-    height: calc(100vh - 6rem);
+    min-height: calc(100vh - 6rem);
 }
 .texts {
     text-shadow: 0px 0px 5px white;
+}
+.btexts {
+    text-shadow: 4px 5px 0px black;
+}
+.wtexts {
+    text-shadow: 4px 5px 0px white;
 }
 .box {
     width: 270px;
@@ -70,7 +76,12 @@ main {
 }
 .cusgrid{
     display: grid;
-    grid-template-columns: 6rem 1fr 6rem;
+    grid-template-columns: 6rem 1fr 6rem; 
+}
+@media screen and (max-width: 640px) {
+    .cusgrid{
+        grid-template-columns: 4rem 1fr 4rem;
+    }
     
 }
 .fixedbgvideo {
@@ -84,4 +95,24 @@ main {
 }
 .screenbgvideo > video {
     @apply xl:w-full h-full xl:h-auto w-auto max-w-none;
+}
+.tri-left{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: white;
+    border-left-color: white;
+}
+.tri-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: white;
+    border-right-color: white;
 }
