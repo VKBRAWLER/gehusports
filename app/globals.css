@@ -28,12 +28,6 @@ main {
 .wtexts {
     text-shadow: 4px 5px 0px white;
 }
-.box {
-    width: 270px;
-    /* height: 80%; */
-    transition-duration: 500ms;
-    box-shadow: 10px 10px 6px rgba(255, 255, 255, 0.8);
-}
 .boxani{
     transform: scale(1.25) rotateY(360deg);
 }
