@@ -6,7 +6,7 @@ const EventsPageSolo = () => {
     const router = useRouter();
 
     useEffect(() => {
-        router.push('/register/chess');
+        router.push('/register/basketball');
     }, []);
 
     return null;

@@ -75,8 +75,7 @@ main {
 @media screen and (max-width: 640px) {
     .cusgrid{
         grid-template-columns: 4rem 1fr 4rem;
-    }
-    
+    } 
 }
 .fixedbgvideo {
     @apply top-0 bottom-0 left-0 right-0 fixed z-0 flex justify-center items-center;
