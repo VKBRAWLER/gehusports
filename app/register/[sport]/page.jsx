@@ -1,5 +1,5 @@
 "use client";
-import {FormInput, FormImage, FormPhone} from '@sections/FormBox';
+import {FormInput, FormImage, FormPhone} from '@components/FormBox';
 import React, { useState } from 'react';
 import FullScreenVideo from '@components/FullScreenVideo';
 function RegistrationForm({params}) {
