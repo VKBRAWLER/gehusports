@@ -1,5 +1,4 @@
 import React from 'react';
-import { Suspense } from 'react';
 import Timer from './Timer';
 import events from '@data/json/events.json'
 const SportsList = (params) => {
@@ -12,9 +11,7 @@ const SportsList = (params) => {
             return(
                 <div key={i.Name} className='flex flex-col justify-center items-center p-5 w-80 rounded-2xl bg-white bg-opacity-70 hover:bg-opacity-100 border-2 border-black'>
                     <div className=' w-10/12'>
-                    <Suspense fallback={<p>Loading...</p>}>
                         <img className='w-full h-full' src={i.Cimage} alt="" />
-                    </Suspense>
                     </div>
                     <div>
                         <h1 className='text-2xl font-bold'>{i.Title} Tournament</h1>

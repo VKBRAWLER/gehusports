@@ -12,7 +12,7 @@
         "Sem": 0,
         "Student ID": 1,
         "Player": 7,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     },
     {
         "SportsName": "cricket",
@@ -27,7 +27,7 @@
         "Sem": 0,
         "Student ID": 0,
         "Player": 11,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     },
     {
         "SportsName": "basketball",
@@ -42,7 +42,7 @@
         "Sem": 0,
         "Student ID": 0,
         "Player": 5,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     },
     {
         "SportsName": "chess",
@@ -57,7 +57,7 @@
         "Sem": 0,
         "Student ID": 0,
         "Player": 0,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     },
     {
         "SportsName": "carrom",
@@ -72,7 +72,7 @@
         "Sem": 0,
         "Student ID": 0,
         "Player": 0,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     },
     {
         "SportsName": "badminton",
@@ -87,7 +87,7 @@
         "Sem": 0,
         "Student ID": 0,
         "Player": 1,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     },
     {
         "SportsName": "table tennis",
@@ -102,6 +102,6 @@
         "Sem": 0,
         "Student ID": 0,
         "Player": 1,
-        " Screenshot of Payment ": 1
+        "Screenshot of Payment": 1
     }
 ]

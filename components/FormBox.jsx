@@ -1,4 +1,15 @@
 import React, { useState } from 'react'
+const FormBox = (params) => {
+  if (params.parameter === 'Screenshot of Payment') {
+    return <FormImage parameter={params.parameter} />
+  }
+  else if (params.parameter === 'Contact Number') {
+    return <FormPhone parameter={params.parameter} />
+  }
+  else {
+    return <FormInput parameter={params.parameter} />
+  }
+}
 const FormInput = (params) => {
   return (
   <div className='flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10'>
@@ -39,5 +50,4 @@ const FormPhone = (params) => {
   </div>
   )
 }
-
-export {FormInput, FormImage, FormPhone};
+export default FormBox;
