@@ -62,9 +62,6 @@ main {
 #form-box {
     box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
 }
-.form-box {
-    box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
-}
 .mem {
     box-shadow: 8px 10px 3px rgb(0, 0, 0, 0.8);
 }
@@ -108,4 +105,14 @@ main {
     border: 50px solid transparent;
     border-bottom-color: white;
     border-right-color: white;
+}
+.FormDiv {
+    @apply flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10;
+}
+.FormLabel {
+    @apply w-full font-bold px-2 text-center sm:text-left sm:text-2xl;
+}
+.FormInput {
+    @apply h-7 px-2 rounded w-8/12 sm:mx-2 sm:w-full md:h-10 md:text-xl;
+    box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
 }

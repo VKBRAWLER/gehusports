@@ -6,17 +6,44 @@ const FormBox = (params) => {
   else if (params.parameter === 'Contact Number') {
     return <FormPhone parameter={params.parameter} />
   }
+  else if (params.parameter === 'College Name') {
+    return <FormCollege parameter={params.parameter} />
+  }
   else {
     return <FormInput parameter={params.parameter} />
   }
 }
 const FormInput = (params) => {
   return (
-  <div className='flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10'>
-    <label className='w-full font-bold px-2 text-center sm:text-left sm:text-2xl' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
-    <input className='form-box h-7 px-2 rounded w-8/12 sm:mx-2 sm:w-full' type="text" id={params.parameter.replace(/\s/g, "")} required />
+  <div className='FormDiv'>
+    <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
+    <input className='FormInput' type="text" id={params.parameter.replace(/\s/g, "")} required />
   </div>
   )
+}
+const FormCollege = (params) => {
+  return (
+    <div className='FormDiv'>
+      <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
+      <select id={params.parameter.replace(/\s/g, "")} className='FormInput'>
+      <option value=""></option>
+      <option value="IIM kashipur">IIM kashipur</option>
+      <option value="Woodbridge">Woodbridge</option>
+      <option value="SSJ Almora">SSJ Almora</option>
+      <option value="LSMPG">LSMPG</option>
+      <option value="G. B. Pant University of Agriculture and Technology">G. B. Pant University of Agriculture and Technology</option>
+      <option value="MIET">MIET</option>
+      <option value="Amrapali Group of Institutes">Amrapali Group of Institutes</option>
+      <option value="Pal College of Technology & Management">Pal College of Technology & Management</option>
+      <option value="Motiram Baburam Govt. Post Graduate(MBPG)">Motiram Baburam Govt. Post Graduate(MBPG)</option>
+      <option value="Birla Institute of Applied Sciences">Birla Institute of Applied Sciences</option>
+      <option value="Dev Singh Bisht College (DSB Campus)">Dev Singh Bisht College (DSB Campus)</option>
+      <option value="Graphic Era Haldwani">Graphic Era Haldwani</option>
+      <option value="Graphic Era Hill University (Bhimtal)">Graphic Era Hill University (Bhimtal)</option>
+      </select>
+      {/* <input className='FormInput' type="text" id={params.parameter.replace(/\s/g, "")} required /> */}
+    </div>
+    )
 }
 
 const FormImage = (params) => {
@@ -25,8 +52,8 @@ const FormImage = (params) => {
     setScreenshot(event.target.files[0]);
   };
   return (
-  <div className='flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10'>
-    <label className='w-full font-bold px-2 text-center sm:text-left sm:text-2xl' htmlFor="screenshot">{params.parameter}:</label>
+  <div className='FormDiv'>
+    <label className='FormLabel' htmlFor="screenshot">{params.parameter}:</label>
     <input className='form-box sr-only' type="file" id="screenshot" accept="image/*" onChange={handleScreenshotChange} required />
     <div className='w-full m-2'>
       {screenshot
@@ -44,9 +71,9 @@ const FormImage = (params) => {
 
 const FormPhone = (params) => {
   return (
-  <div className='flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10'>
-    <label className='w-full font-bold px-2 text-center sm:text-left sm:text-2xl' htmlFor="contactNumber">{params.parameter}:</label>
-    <input className='form-box h-7 px-2 rounded w-8/12 sm:mx-2 sm:w-full' type="tel" id="contactNumber" required />
+  <div className='FormDiv'>
+    <label className='FormLabel' htmlFor="contactNumber">{params.parameter}:</label>
+    <input className='FormInput' type="tel" id="contactNumber" required />
   </div>
   )
 }
