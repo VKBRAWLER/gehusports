@@ -113,6 +113,6 @@ main {
     @apply w-full font-bold px-2 text-center sm:text-left sm:text-2xl;
 }
 .FormInput {
-    @apply h-7 px-2 rounded w-8/12 sm:mx-2 sm:w-full md:h-10 md:text-xl;
+    @apply h-7 px-2 rounded w-3/4 sm:mx-2 sm:w-full md:h-10 md:text-xl;
     box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
 }

@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react'
 const FormBox = (params) => {
   if (params.parameter === 'Screenshot of Payment') {
-    return <FormImage parameter={params.parameter} />
+    return <FormImage parameter={params.parameter} name={params.name} />
   }
   else if (params.parameter === 'Contact Number') {
-    return <FormPhone parameter={params.parameter} />
+    return <FormPhone parameter={params.parameter} name={params.name} />
   }
   else if (params.parameter === 'College Name') {
-    return <FormCollege parameter={params.parameter} />
+    return <FormCollege parameter={params.parameter} name={params.name} />
   }
   else {
-    return <FormInput parameter={params.parameter} />
+    return <FormInput parameter={params.parameter} name={params.name} />
   }
 }
 const FormInput = (params) => {
   return (
   <div className='FormDiv'>
     <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
-    <input className='FormInput' type="text" id={params.parameter.replace(/\s/g, "")} required />
+    <input className='FormInput' name={params.name} type="text" id={params.parameter.replace(/\s/g, "")} required />
   </div>
   )
 }
@@ -25,7 +25,7 @@ const FormCollege = (params) => {
   return (
     <div className='FormDiv'>
       <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
-      <select id={params.parameter.replace(/\s/g, "")} className='FormInput'>
+      <select id={params.parameter.replace(/\s/g, "")} className='FormInput' name={params.name}>
       <option value=""></option>
       <option value="IIM kashipur">IIM kashipur</option>
       <option value="Woodbridge">Woodbridge</option>
@@ -51,7 +51,6 @@ const FormImage = (params) => {
   const [screenshot, setScreenshot] = useState(null);
   const handleScreenshotChange = (event) => {
     setScreenshot(event.target.files[0]);
-    SSinput.value = null;
   };
   const handleScreenshotClick = () => {
     SSinput.click();
@@ -63,7 +62,7 @@ const FormImage = (params) => {
   return (
   <div className='FormDiv'>
     <label className='FormLabel' htmlFor="screenshot">{params.parameter}:</label>
-    <input className='form-box sr-only' type="file" id="screenshot" accept="image/*" onChange={handleScreenshotChange} required />
+    <input className='form-box sr-only' name={params.name} type="file" id="screenshot" accept="image/*" onChange={handleScreenshotChange} required />
     <div className='w-full m-2'>
       {screenshot
       ?<> 
