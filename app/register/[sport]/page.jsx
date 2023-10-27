@@ -19,7 +19,7 @@ function RegistrationForm({params}) {
         <FullScreenVideo link={bgsport} type={'fixedbgvideo'} />
         <main className='flex flex-wrap justify-center items-center relative z-10'>
         <h3 className='text-2xl font-bold  w-full text-center sm:text-3xl texts'>{params.sport.toUpperCase()} Tournament Registration Form</h3>
-        <form id='form-box' className="bg-yellow-200 py-10 rounded-2xl m-5 w-[calc(100%-2.5rem)] bg-opacity-30 max-w-3xl" action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSesmi_yn4HL3M3p9ONBbelhLrIKDraKm6eHZqYqgHoGTFXfIw/formResponse'>
+        <form id='form-box' className="bg-yellow-200 py-10 rounded-2xl m-5 w-[calc(100%-2.5rem)] bg-opacity-30 max-w-3xl" action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSeopyp5TPNb0iGUUia1sroZdwGK8Gk32Xp2arvfw06lr2SEvg/formResponse'>
         {Object.entries(RegisterList).map(([key, value], index) => {
             if (key === 'SportsName') {
                 return null;
