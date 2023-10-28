@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+}
+
 @font-face {
     font-family: Roboto_Slab;
     src: url('/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf');
@@ -20,13 +25,13 @@ main {
     min-height: calc(100vh - 6rem);
 }
 .texts {
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px var(--white-color);
 }
 .btexts {
-    text-shadow: 4px 5px 0px black;
+    text-shadow: 4px 5px 0px var(--black-color);
 }
 .wtexts {
-    text-shadow: 4px 5px 0px white;
+    text-shadow: 4px 5px 0px var(--white-color);
 }
 .boxani{
     transform: scale(1.25) rotateY(360deg);
@@ -93,8 +98,8 @@ main {
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-bottom-color: white;
-    border-left-color: white;
+    border-bottom-color: var(--white-color);
+    border-left-color: var(--white-color);
 }
 .tri-right{
     position: absolute;
@@ -103,8 +108,8 @@ main {
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-bottom-color: white;
-    border-right-color: white;
+    border-bottom-color: var(--white-color);
+    border-right-color: var(--white-color);
 }
 .FormDiv {
     @apply flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10;

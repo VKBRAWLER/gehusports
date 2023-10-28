@@ -1,8 +1,7 @@
-import React from 'react'
-
+import Content from "./Content";
 const Faculty = () => {
-  const facimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEwfjJEZno_M_rTutJHcl9BTTb8wIHfXZ2z3iNjmvZ&s";
-  const dicimg = 'https://cdn.discordapp.com/attachments/1163848747504124019/1164445807332831272/mc.jpg?ex=65433daa&is=6530c8aa&hm=02f30612bb298b5cf75fa14c2553e13b99f94793547b009976b2f8016848098e&';
+  const facimg = Content.facimg;
+  const dicimg = Content.dicimg;
   return (
   <>
   <h1 className='w-full text-center font-extrabold text-3xl sm:text-5xl texts relative bg-gradient-to-b from-white py-10 md:py-20'>FACULTY INCHARHGE</h1>

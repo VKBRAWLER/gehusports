@@ -1,7 +1,7 @@
-import React from 'react'
+import Content from './Content';
 import Link from 'next/link';
 const EnduranceCup = () => {
-  const drone = 'https://cdn.discordapp.com/attachments/1162451241872412902/1164445349147054131/drone.mp4?ex=65433d3d&is=6530c83d&hm=3b8cb22447eed598759621bddfc8097b8627a24d897623c3c2e172c1bc431301&';
+  const drone = Content.DroneBG;
 return (
 <div className='absolute z-0 top-0 right-0 left-0 h-[60vh] flex flex-wrap justify-center'>
   <video className='object-cover w-full h-full' src={drone} autoPlay muted loop />

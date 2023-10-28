@@ -1,4 +1,3 @@
-import React from 'react';
 import Timer from './Timer';
 import events from '@data/json/events.json'
 const SportsList = (params) => {
@@ -17,7 +16,7 @@ const SportsList = (params) => {
                         <h1 className='text-2xl font-bold'>{i.Title} Tournament</h1>
                         <section className='w-3/4 float-left'>
                             <p className='text-sm'>Time Remaining: </p>
-                            {/* <Timer targetTime={i.Sdate} /> */}
+                            <Timer targetTime={i.Sdate} />
                         </section>
                         <section className='w-1/4 float-right'>
                             <button className='bg-blue-400 p-2 rounded-xl'>Register</button>

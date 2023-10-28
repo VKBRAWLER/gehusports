@@ -1,10 +1,10 @@
-import React from 'react';
-
+import Content from "./Content";
 const LateralScroll = () => {
+  const akkida = Content.akkida;
   const divs = [];
   for (let i = 0; i < 10; i++) {
     divs.push(<div className={"rounded-t-3xl bg-white bg-opacity-50 border-4 w-44 mem"}>
-    <img src="/images/pp.png" alt="" className={'rounded-full'}/>
+    <img src={akkida} alt="" className={'rounded-full'}/>
     <h4 className={'text-center font-bold text-lg mt-10'}>Varun Kharkwal</h4>
     <p className={'text-center'}>Web-Developer</p>
     </div>);
