@@ -11,7 +11,7 @@ const Timer = (props) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeLeft(calculateTimeLeft(targetTime));
-    }, 6000);
+    }, 1000);
     return () => clearInterval(interval);
   }, [targetTime]);
 

@@ -1,8 +1,12 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
 import SportsList from '@components/SportsList';
+import NotFound from '@app/not-found';
 import Link from 'next/link';
 const EventsPage = ({params}) => {
+    if (!(params.status === 'UPCOMING' || params.status === 'ONGOING' || params.status === 'COMPLETED')) {
+        return <NotFound /> 
+    }
     return (
     <>
     <main>
