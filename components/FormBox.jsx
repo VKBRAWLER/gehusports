@@ -12,7 +12,7 @@ const FormBox = (params) => {
   else {
     return <FormInput parameter={params.parameter} name={params.name} />
   }
-}
+};
 const FormInput = (params) => {
   return (
   <div className='FormDiv'>
@@ -20,12 +20,12 @@ const FormInput = (params) => {
     <input className='FormInput' name={params.name} type="text" id={params.parameter.replace(/\s/g, "")} required />
   </div>
   )
-}
+};
 const FormCollege = (params) => {
   return (
     <div className='FormDiv'>
       <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
-      <select id={params.parameter.replace(/\s/g, "")} className='FormInput' name={params.name}>
+      <select id={params.parameter.replace(/\s/g, "")} className='FormInput' name={params.name} required>
       <option value=""></option>
       <option value="IIM kashipur">IIM kashipur</option>
       <option value="Woodbridge">Woodbridge</option>
@@ -44,7 +44,7 @@ const FormCollege = (params) => {
       {/* <input className='FormInput' type="text" id={params.parameter.replace(/\s/g, "")} required /> */}
     </div>
     )
-}
+};
 
 const FormImage = (params) => {
   const [SSinput, setSSinput] = useState(null);
@@ -75,7 +75,7 @@ const FormImage = (params) => {
     </div>
   </div>
   )
-}
+};
 
 const FormPhone = (params) => {
   return (
@@ -84,5 +84,5 @@ const FormPhone = (params) => {
     <input className='FormInput' type="tel" id="contactNumber" required />
   </div>
   )
-}
+};
 export default FormBox;
