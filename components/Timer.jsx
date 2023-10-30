@@ -5,7 +5,7 @@ import calculateTimeLeft from "@func/CalculateTimeLeft";
 const Timer = (props) => {
   // Set the target time and time left in state
   const [targetTime] = useState(new Date(props.targetTime));
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetTime));
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft("2023-11-01T00:00:00"));
 
   // Update the time left every minute
   useEffect(() => {

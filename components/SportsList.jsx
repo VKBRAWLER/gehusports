@@ -1,9 +1,10 @@
 import Timer from './Timer';
-import events from '@data/json/events.json'
+import events from '@data/json/events.json';
+import Link from 'next/link';
 const SportsList = (params) => {
   let SportsArray = events.filter((i)=> i[params.status]);
   if (params.filter) { SportsArray = SportsArray.filter((i)=> (params.filter[0] == i.TAG))}
-  if (SportsArray.length > 0) {
+  if (SportsArray.length) {
     return (
     <section className='w-full p-2 flex flex-wrap justify-center gap-3'>
         {SportsArray.map((i) => {
@@ -12,16 +13,19 @@ const SportsList = (params) => {
                     <div className=' w-10/12'>
                         <img className='w-full h-full' src={i.Cimage} alt="" />
                     </div>
-                    <div>
-                        <h1 className='text-2xl font-bold'>{i.Title} Tournament</h1>
-                        <section className='w-3/4 float-left'>
+                    <h1 className='text-2xl font-bold'>{i.Title} Tournament</h1>
+                    <article className='w-5/6 h-11 flex justify-between items-center'>
+                    {i.Sdate?
+                        <>
+                        <div>
                             <p className='text-sm'>Time Remaining: </p>
                             <Timer targetTime={i.Sdate} />
-                        </section>
-                        <section className='w-1/4 float-right'>
-                            <button className='bg-blue-400 p-2 rounded-xl'>Register</button>
-                        </section>
-                    </div>
+                        </div>
+                        <Link href={'/'} className='bg-blue-400 p-2 rounded-xl'>Register</Link>
+                        </>
+                    : <div className='font-bold text-lg'>Comming Soon ...</div>
+                    }
+                    </article>
                 </div>
             )
         })}
@@ -39,4 +43,4 @@ const SportsList = (params) => {
     }
 }
 
-export default SportsList
+export default SportsList;
