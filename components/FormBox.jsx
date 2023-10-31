@@ -1,22 +1,31 @@
 import React, { useEffect, useState } from 'react'
 const FormBox = (params) => {
   if (params.parameter === 'Screenshot of Payment') {
-    return <FormImage parameter={params.parameter} name={params.name} />
+    return <FormImage parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
   }
   else if (params.parameter === 'Contact Number') {
-    return <FormPhone parameter={params.parameter} name={params.name} />
+    return <FormPhone parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
   }
   else if (params.parameter === 'College Name') {
-    return <FormCollege parameter={params.parameter} name={params.name} />
+    return <FormCollege parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
+  }
+  else if (params.parameter === 'Email') {
+    return <FormEmail parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
+  }
+  else if (params.parameter === 'Student ID') {
+    return <FormStudentID parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
+  }
+  else if (params.parameter === 'Required Player') {
+    return <FormStudentID parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
   }
   else {
-    return <FormInput parameter={params.parameter} name={params.name} />
+    return <FormInput parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
   }
 };
 const FormInput = (params) => {
   return (
   <div className='FormDiv'>
-    <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
     <input className='FormInput' name={params.name} type="text" id={params.parameter.replace(/\s/g, "")} required />
   </div>
   )
@@ -24,7 +33,7 @@ const FormInput = (params) => {
 const FormCollege = (params) => {
   return (
     <div className='FormDiv'>
-      <label className='FormLabel' htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
+      <label className={`FormLabel text-${params.colortheme}`} htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
       <select id={params.parameter.replace(/\s/g, "")} className='FormInput' name={params.name} required>
       <option value=""></option>
       <option value="IIM kashipur">IIM kashipur</option>
@@ -57,11 +66,11 @@ const FormImage = (params) => {
     setScreenshot(null);
   }
   useEffect(()=> {
-    setSSinput(document.getElementById('screenshot'));
+    setSSinput(document.genumberementById('screenshot'));
   })
   return (
   <div className='FormDiv'>
-    <label className='FormLabel' htmlFor="screenshot">{params.parameter}:</label>
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor="screenshot">{params.parameter}:</label>
     <input className='form-box sr-only' name={params.name} type="file" id="screenshot" accept="image/*" onChange={handleScreenshotChange} required />
     <div className='w-full m-2'>
       {screenshot
@@ -80,8 +89,33 @@ const FormImage = (params) => {
 const FormPhone = (params) => {
   return (
   <div className='FormDiv'>
-    <label className='FormLabel' htmlFor="contactNumber">{params.parameter}:</label>
-    <input className='FormInput' type="tel" id="contactNumber" required />
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor="contactNumber">{params.parameter}:</label>
+    <input className='FormInput' type="tel" id="contactNumber" name={params.name} pattern="[0-9]{10}" required />
+  </div>
+  )
+};
+
+const FormEmail = (params) => {
+  return (
+  <div className='FormDiv'>
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor="email">{params.parameter}:</label>
+    <input className='FormInput' type="email" id="email" name={params.name} required />
+  </div>
+  )
+};
+const FormStudentID = (params) => {
+  return (
+  <div className='FormDiv'>
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor="studentID">{params.parameter}:</label>
+    <input className='FormInput' type="tel" id="studentID" name={params.name} maxLength={9} pattern="[0-9]" required />
+  </div>
+  )
+};
+const FormReqPlayer = (params) => {
+  return (
+  <div className='FormDiv'>
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor="player1">{params.parameter}:</label>
+    <input className='FormInput' type="text" id="player1" name={params.name} required />
   </div>
   )
 };

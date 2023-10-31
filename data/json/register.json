@@ -1,38 +1,38 @@
 [
     {
         "SportsName": "ArmWrestling",
-        "Team Name": "entry.1514101190",
-        "Captian Name": "entry.2076395429",
-        "Contact Number": "entry.555639742",
-        "Full Name": 0,
-        "Email ": "entry.548555184",
-        "Course Name": "entry.1828627585",
-        "Year": "entry.2093456979",
-        "Payment UPI": "entry.139421432",
-        "Category": "entry.1882846636"
-    },
-    {
-        "SportsName": "Football",
-        "Team Name": "entry.1514101190",
-        "Captian Name": "entry.2076395429",
-        "Contact Number": "entry.555639742",
-        "Full Name": 0,
-        "Email ": "entry.548555184",
-        "Course Name": "entry.1828627585",
-        "Year": "entry.2093456979",
-        "Payment UPI": "entry.139421432",
-        "Category": 0
-    },
-    {
-        "SportsName": "Cricket",
         "Team Name": 0,
-        "Captian Name": 0,
-        "Contact Number": "entry.555639742",
+        "Captain Name": 0,
         "Full Name": "entry.2076395429",
+        "Contact Number": "entry.555639742",
         "Email ": "entry.548555184",
         "Course Name": "entry.1828627585",
         "Year": "entry.2093456979",
-        "Payment UPI": "entry.139421432",
-        "Category": 0
+        "Category\u00a0": "entry.139421432",
+        "UPI ID (payment proof)": "entry.139421432"
+    },
+    {
+        "SportsName": "Football\u00a0",
+        "Team Name": "entry.1514101190",
+        "Captain Name": "entry.2076395429",
+        "Full Name": 0,
+        "Contact Number": "entry.555639742",
+        "Email ": "entry.548555184",
+        "Course Name": "entry.1828627585",
+        "Year": "entry.2093456979",
+        "Category\u00a0": 0,
+        "UPI ID (payment proof)": "entry.139421432"
+    },
+    {
+        "SportsName": "Cricket\u00a0",
+        "Team Name": "entry.1514101190",
+        "Captain Name": "entry.2076395429",
+        "Full Name": 0,
+        "Contact Number": "entry.555639742",
+        "Email ": "entry.548555184",
+        "Course Name": "entry.1828627585",
+        "Year": "entry.2093456979",
+        "Category\u00a0": 0,
+        "UPI ID (payment proof)": "entry.139421432"
     }
 ]

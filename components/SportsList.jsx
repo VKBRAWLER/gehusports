@@ -21,7 +21,7 @@ const SportsList = (params) => {
                             <p className='text-sm'>Time Remaining: </p>
                             <Timer targetTime={i.Sdate} />
                         </div>
-                        <Link href={'/'} className='bg-blue-400 p-2 rounded-xl'>Register</Link>
+                        <Link href={`/register/${i.Name}`} className='bg-blue-400 p-2 rounded-xl'>Register</Link>
                         </>
                     : <div className='font-bold text-lg'>Comming Soon ...</div>
                     }

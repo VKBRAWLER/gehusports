@@ -13,7 +13,7 @@ const Faculty = () => {
           <p className='m-2 lg:absolute left-1 right-1 -bottom-full lg:opacity-0 group-hover:bottom-3/4 group-hover:opacity-100 duration-700'>``Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quibusdam et tempore, aut recusandae aspernatur asperiores. Possimus, accusamus, dicta cum molestias quisquam placeat provident, veritatis sapiente assumenda necessitatibus libero quae.``</p></div>
       </div>
       <div className="max-w-sm sm:w-72 md:w-1/4 overflow-hidden bg-white group">
-        <img className='w-full' src={facimg} alt="" />
+        <img className='w-full' src={dicimg} alt="" />
         <div className='lg:relative'>
           <h3 className='text-2xl bg-blue-400 w-full text-center'>Faculty Name 01</h3>
           <p className='m-2 lg:absolute left-1 right-1 -bottom-full lg:opacity-0 group-hover:bottom-3/4 group-hover:opacity-100 duration-700'>``Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quibusdam et tempore, aut recusandae aspernatur asperiores. Possimus, accusamus, dicta cum molestias quisquam placeat provident, veritatis sapiente assumenda necessitatibus libero quae.``</p></div>

@@ -18,7 +18,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     font-family: Roboto_Slab;
-    
 }
 main {
     width: 100%;
@@ -83,7 +82,7 @@ main {
     @apply top-0 bottom-0 left-0 right-0 fixed z-0 flex justify-center items-center;
 }
 .fixedbgvideo > video {
-    @apply max-w-none min-h-screen;
+    @apply max-w-none min-h-screen xl:min-w-full;
 }
 .screenbgvideo {
     @apply top-0 bottom-0 left-0 right-0 absolute z-0 flex justify-center items-center overflow-hidden;
@@ -115,9 +114,17 @@ main {
     @apply flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10;
 }
 .FormLabel {
+    /* -webkit-text-stroke: #000; */
+    /* -webkit-text-stroke-width: 0.6px; */
+    /* text-shadow: 0px 0px 5px var(--black-color); */
     @apply w-full font-bold px-2 text-center sm:text-left sm:text-2xl;
 }
 .FormInput {
     @apply h-7 px-2 rounded w-3/4 sm:mx-2 sm:w-full md:h-10 md:text-xl;
     box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
