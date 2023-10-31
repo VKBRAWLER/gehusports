@@ -2,100 +2,71 @@
     {
         "Name": "Football",
         "Title": "Football",
-        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658445119488/Badminton-01.png?ex=654126f3&is=652eb1f3&hm=471c57b99bcdc60f411862bdf7a01a72074a66f0d0d779b682b0c1e2c928ac67&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
+        "Sdate": "2023-11-02T00:00:00",
+        "Cimage": "https://media.discordapp.net/attachments/1162451241872412901/1168970793334624377/FOOTBALL-01.png?ex=6553b3e3&is=65413ee3&hm=cf3bcc4a761ae1e33f1d04e4becf8a0190f747ef2c3ddc97bb95e07cbcc8c067&=&width=606&height=662",
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TAG": "o",
-        "Registration": 0
-    },
-    {
-        "Name": "Basketball",
-        "Title": "Basketball",
-        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658952634428/Basketball-01.png?ex=654126f3&is=652eb1f3&hm=f539824e1aa7b08961f5c9f6ec608da006161916fe2176550e3401beacab893c&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
-        "UPCOMING": 1,
-        "ONGOING": 0,
-        "COMPLETED": 0,
-        "TAG": "o",
-        "Registration": 0
+        "TAG": "o"
     },
     {
         "Name": "Cricket",
         "Title": "Cricket",
-        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871657656594562/Cricket-01.png?ex=654126f2&is=652eb1f2&hm=7164052bcc4ecfb45a1afd57927b6e565249872b1c36cf8c08b33ed324a41aa2&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
+        "Sdate": "2023-11-02T00:00:00",
+        "Cimage": "https://media.discordapp.net/attachments/1162451241872412901/1168971895278940182/Cricket-01-01.png?ex=6553b4ea&is=65413fea&hm=a22acd885cce2439f76652de24a379a77c0de620532cdd66bafa31aadc9ffad4&=&width=606&height=662",
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TAG": "o",
-        "Registration": 0
+        "TAG": "o"
+    },
+    {
+        "Name": "ArmWrestling",
+        "Title": "Arm Wrestling",
+        "Sdate": "2023-11-02T00:00:00",
+        "Cimage": "https://media.discordapp.net/attachments/1162451241872412901/1168970792973910137/ARM-01.png?ex=6553b3e3&is=65413ee3&hm=4aa72791ef6c4ffbc1deacafc043591aa068d15b37eec2f4465d04557ad819e1&=&width=606&height=662",
+        "UPCOMING": 1,
+        "ONGOING": 0,
+        "COMPLETED": 0,
+        "TAG": "i"
+    },
+    {
+        "Name": "Basketball",
+        "Title": "Basketball",
+        "Sdate": null,
+        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658952634428/Basketball-01.png?ex=654126f3&is=652eb1f3&hm=f539824e1aa7b08961f5c9f6ec608da006161916fe2176550e3401beacab893c&=&width=606&height=662",
+        "UPCOMING": 1,
+        "ONGOING": 0,
+        "COMPLETED": 0,
+        "TAG": "o"
     },
     {
         "Name": "Chess",
         "Title": "Chess",
+        "Sdate": null,
         "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871659376251053/Chess-01.png?ex=654126f3&is=652eb1f3&hm=1c59ff862c2829ec507d82a8cf7d47321d2fea3cee9c20e06c983beb771688c8&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
-        "UPCOMING": 0,
-        "ONGOING": 1,
-        "COMPLETED": 0,
-        "TAG": "i",
-        "Registration": 0
-    },
-    {
-        "Name": "Valorant",
-        "Title": "Valorant",
-        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658084405338/Volleyball.png?ex=654126f2&is=652eb1f2&hm=a380084f1cb56b3696d8643b5deb5986eace96e712788614119e170caf7e123f&=&width=606&height=662",
-        "Sdate": "???",
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TAG": "e",
-        "Registration": 0
-    },
-    {
-        "Name": "BGMI",
-        "Title": "BGMI",
-        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871657656594562/Cricket-01.png?ex=654126f2&is=652eb1f2&hm=7164052bcc4ecfb45a1afd57927b6e565249872b1c36cf8c08b33ed324a41aa2&=&width=606&height=662",
-        "Sdate": "???",
-        "UPCOMING": 1,
-        "ONGOING": 0,
-        "COMPLETED": 0,
-        "TAG": "e",
-        "Registration": 0
-    },
-    {
-        "Name": "Carrom",
-        "Title": "Carrom",
-        "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658084405338/Volleyball.png?ex=654126f2&is=652eb1f2&hm=a380084f1cb56b3696d8643b5deb5986eace96e712788614119e170caf7e123f&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
-        "UPCOMING": 0,
-        "ONGOING": 0,
-        "COMPLETED": 1,
-        "TAG": "i",
-        "Registration": 0
+        "TAG": "i"
     },
     {
         "Name": "Volleyball",
         "Title": "Volleyball",
+        "Sdate": null,
         "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658084405338/Volleyball.png?ex=654126f2&is=652eb1f2&hm=a380084f1cb56b3696d8643b5deb5986eace96e712788614119e170caf7e123f&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
-        "UPCOMING": 0,
-        "ONGOING": 1,
+        "UPCOMING": 1,
+        "ONGOING": 0,
         "COMPLETED": 0,
-        "TAG": "o",
-        "Registration": 0
+        "TAG": "o"
     },
     {
         "Name": "Batminton",
         "Title": "Batminton",
+        "Sdate": null,
         "Cimage": "https://media.discordapp.net/attachments/1163848747504124019/1163871658445119488/Badminton-01.png?ex=654126f3&is=652eb1f3&hm=471c57b99bcdc60f411862bdf7a01a72074a66f0d0d779b682b0c1e2c928ac67&=&width=606&height=662",
-        "Sdate": "2023-11-01T00:00:00",
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TAG": "o",
-        "Registration": 0
+        "TAG": "x"
     }
 ]
