@@ -8,11 +8,11 @@
         "Email ": "entry.548555184",
         "Course Name": "entry.1828627585",
         "Year": "entry.2093456979",
-        "Category\u00a0": "entry.139421432",
+        "Category": "entry.139421432",
         "UPI ID (payment proof)": "entry.139421432"
     },
     {
-        "SportsName": "Football\u00a0",
+        "SportsName": "Football",
         "Team Name": "entry.1514101190",
         "Captain Name": "entry.2076395429",
         "Full Name": 0,
@@ -20,11 +20,11 @@
         "Email ": "entry.548555184",
         "Course Name": "entry.1828627585",
         "Year": "entry.2093456979",
-        "Category\u00a0": 0,
+        "Category": 0,
         "UPI ID (payment proof)": "entry.139421432"
     },
     {
-        "SportsName": "Cricket\u00a0",
+        "SportsName": "Cricket",
         "Team Name": "entry.1514101190",
         "Captain Name": "entry.2076395429",
         "Full Name": 0,
@@ -32,7 +32,7 @@
         "Email ": "entry.548555184",
         "Course Name": "entry.1828627585",
         "Year": "entry.2093456979",
-        "Category\u00a0": 0,
+        "Category": 0,
         "UPI ID (payment proof)": "entry.139421432"
     }
 ]
