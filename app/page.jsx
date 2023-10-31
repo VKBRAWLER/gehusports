@@ -12,7 +12,7 @@ const HomePage = () => {
       </div>
       <Faculty />
       <LateralScroll/>
-      <div className="h-screen"></div>
+      <div className="h-24"></div>
     </main>
     </>
   )
