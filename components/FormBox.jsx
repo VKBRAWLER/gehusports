@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
 const FormBox = (params) => {
-  if (params.parameter === 'Screenshot of Payment') {
-    return <FormImage parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
-  }
-  else if (params.parameter === 'Contact Number') {
+  if (params.parameter === 'Contact Number') {
     return <FormPhone parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
-  }
-  else if (params.parameter === 'College Name') {
-    return <FormCollege parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
   }
   else if (params.parameter === 'Year') {
     return <FormYear parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
   }
   else if (params.parameter === 'Category') {
     return <FormCategory parameter={params.parameter} name={params.name} colortheme={params.colortheme}/> 
+  }
+  else if (params.parameter === 'UPI ID (payment proof)') {
+    return <FormUPI parameter={params.parameter} name={params.name} colortheme={params.colortheme} QR={params.QR} />
   }
   else {
     return <FormInput parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
@@ -62,6 +59,19 @@ const FormCategory = (params) => {
     </div>
   </div>
     )
+};
+const FormUPI = (params) => {
+  return (
+    <>
+    <div className='FormDiv'>
+    <label className={`FormLabel text-${params.colortheme}`} htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
+    <input className='FormInput' name={params.name} type="text" id={params.parameter.replace(/\s/g, "")} required />
+    </div>
+    <div className="FormDiv">
+      <img src={params.QR} alt="" className='w-full h-full p-10'/>
+    </div>
+    </>
+  )
 };
 const FormPhone = (params) => {
   return (

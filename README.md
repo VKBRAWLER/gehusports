@@ -40,3 +40,10 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 } else {
  getting = 'Light';
 }
+
+CheckList:
+Event's Raw Poster need to be added on event page from event.xlsx
+Faculty Image & Quote
+Coordinator's Image & Details
+Check BackEnd for all the data
+Scanner for Arm Wrestling
