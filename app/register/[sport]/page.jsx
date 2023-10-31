@@ -9,6 +9,14 @@ function RegistrationForm({params}) {
     const [RegisterList, setRegisterList] = useState([]);
     const [colortheme, setColortheme] = useState('blue');
     const [textcolor, setTextcolor] = useState('blue-300');
+    const [submitting, setSubmitting] = useState(false);
+    useEffect(() => {
+        if (submitting) {
+            setTimeout(() => {
+                setSubmitting(false);
+            }, 3000);
+        }
+    }, [submitting]);
     useEffect(() => {
         for (let i = 0; i < Content.BGVideo.length; i++) {
             if (Content.BGVideo[i].name.toLowerCase() === params.sport.toLowerCase()) {
@@ -44,7 +52,7 @@ function RegistrationForm({params}) {
             }
         })}
         {/* https://www.geeksforgeeks.org/javascript-object-entries-method/ */}
-        <div className="w-full flex justify-center items-center h-16"><button className={`form-box bg-white h-12 px-4 rounded-2xl border-${colortheme}-200 active:bg-${colortheme}-500 hover:border-${colortheme}-400 border-4`} type="submit">Submit</button></div>
+        <div onClick={()=>{setSubmitting(true)}}  className="w-full flex justify-center items-center h-16"><button className={`form-box bg-white h-12 px-4 rounded-2xl border-${colortheme}-200 active:bg-${colortheme}-500 hover:border-${colortheme}-400 border-4`} type="submit">{submitting?<>Submiting..</>:<>Submit</>}</button></div>
         <div className="sr-only text-blue-300"></div>
         <div className="sr-only text-black"></div>
         </form>
