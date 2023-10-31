@@ -67,7 +67,7 @@ const FormPhone = (params) => {
   return (
   <div className='FormDiv'>
     <label className={`FormLabel text-${params.colortheme}`} htmlFor="contactNumber">{params.parameter}:</label>
-    <input className='FormInput' type="tel" id="contactNumber" name={params.name} pattern="[0-9]{10}" required />
+    <input className='FormInput' type="tel" id="contactNumber" name={params.name} pattern="[0-9]{10}" minLength={10} maxLength={10} required />
   </div>
   )
 };
