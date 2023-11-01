@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "Akhilesh Pandey",
+        "Designation": "Sport's Organizer",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130892481019985/organizer.png?ex=655448fe&is=6541d3fe&hm=230f5a32ad5badace3677a959650cb751b71e9a13058e379d1b936af8336301f&=&width=380&height=380"
+    },
+    {
+        "Name": "Varun Kharkwal",
+        "Designation": "Web Development",
+        "Image": 0
+    },
+    {
+        "Name": "Amit Bisht",
+        "Designation": "Disipline Incharge",
+        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169131684541779978/disipline.png?ex=655449bb&is=6541d4bb&hm=c1d72e460028dd82b3d04417e0276a6fe5078697442fcd78145aa38e44e9692a&"
+    },
+    {
+        "Name": 0,
+        "Designation": "Chess Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130891839287306/chessco.png?ex=655448fe&is=6541d3fe&hm=224232f75ee3e45f1f302cabc4382f97e465e74d17e4bf87c36288a5acc59a1f&=&width=380&height=380"
+    },
+    {
+        "Name": 0,
+        "Designation": "Cricket Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130892166430730/cricketco.png?ex=655448fe&is=6541d3fe&hm=3a703ee136e34d99d6f260a30b0f6708745b832f430b288921530a628ca624e4&=&width=380&height=380"
+    },
+    {
+        "Name": "Aron Singh",
+        "Designation": "Chess Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169134082119192597/chessco_1.png?ex=65544bf6&is=6541d6f6&hm=5a442575c9a8ca22f1b67045bbf13d4ee5699372c638b25510f67d88de6642d7&=&width=380&height=380"
+    },
+    {
+        "Name": "Priyanshu kulyal",
+        "Designation": "Football Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169134082362441779/football.png?ex=65544bf6&is=6541d6f6&hm=aef1441d9656da9db6071c6d2a2607dd17f8b1995b64c21f142d9a117fe5c2eb&=&width=380&height=380"
+    }
+]
