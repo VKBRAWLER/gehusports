@@ -2,7 +2,7 @@
     {
         "Name": "Football",
         "Title": "Football",
-        "Sdate": "2023-11-05T00:00:00",
+        "Sdate": "2023-11-02T00:00:00",
         "Cimage": "https://media.discordapp.net/attachments/1162451241872412901/1169127674875232326/football-01.png?ex=655445ff&is=6541d0ff&hm=d2ae759a85d5674f4deae5b87a3a1790d17608bf8e72c7caaf33560f3478c2a9&=&width=606&height=662",
         "UPCOMING": 1,
         "ONGOING": 0,
@@ -12,7 +12,7 @@
     {
         "Name": "Cricket",
         "Title": "Cricket",
-        "Sdate": "2023-11-02T00:00:00",
+        "Sdate": "2023-11-05T00:00:00",
         "Cimage": "https://media.discordapp.net/attachments/1162451241872412901/1169123322538233886/Cricket-01-01.png?ex=655441f1&is=6541ccf1&hm=58f97afb651174ae4f7a6061aec121c2e63fc7aba60ba61763f84a721f630bf2&=&width=606&height=662",
         "UPCOMING": 1,
         "ONGOING": 0,
