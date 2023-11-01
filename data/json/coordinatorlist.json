@@ -15,12 +15,12 @@
         "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169148446037524590/singal.png?ex=65545957&is=6541e457&hm=cda6b1817a34c9478491dcdeed09606809c069bc99f6163456af737b14982287&"
     },
     {
-        "Name": "Amit Bisht",
-        "Designation": "Disipline Incharge",
-        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169131684541779978/disipline.png?ex=655449bb&is=6541d4bb&hm=c1d72e460028dd82b3d04417e0276a6fe5078697442fcd78145aa38e44e9692a&"
+        "Name": "Nishant Singh Almiya",
+        "Designation": "Sport's Organizer",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169167037944315954/gaya.png?ex=65546aa7&is=6541f5a7&hm=0e0f2e3a2fe807fae36a97e354c315e82f0d0c94fd6d45895cb057099be49491&=&width=380&height=380"
     },
     {
-        "Name": "Apoorav",
+        "Name": "Apoorav Singh",
         "Designation": "Table Tennis Co-ordinator",
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130891839287306/chessco.png?ex=655448fe&is=6541d3fe&hm=224232f75ee3e45f1f302cabc4382f97e465e74d17e4bf87c36288a5acc59a1f&=&width=380&height=380"
     },
@@ -30,9 +30,9 @@
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130892166430730/cricketco.png?ex=655448fe&is=6541d3fe&hm=3a703ee136e34d99d6f260a30b0f6708745b832f430b288921530a628ca624e4&=&width=380&height=380"
     },
     {
-        "Name": "Aron Singh",
+        "Name": "Aaron Singh",
         "Designation": "Chess Co-ordinator",
-        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169134082119192597/chessco_1.png?ex=65544bf6&is=6541d6f6&hm=5a442575c9a8ca22f1b67045bbf13d4ee5699372c638b25510f67d88de6642d7&=&width=380&height=380"
+        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169167038174994492/aron.png?ex=65546aa7&is=6541f5a7&hm=33907815ee270399609fb940149c876db334ffa405df6bfc56630205bfe01733&"
     },
     {
         "Name": "Priyanshu kulyal",
@@ -43,5 +43,15 @@
         "Name": "Gayatri Bisht",
         "Designation": "Table Tennis Co-ordinator",
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169146090797408256/gay.png?ex=65545725&is=6541e225&hm=ad839237ccb5996c9575a99f2d37193e59b383a6b59c0a4d1aa559ff3983f9ce&=&width=380&height=380"
+    },
+    {
+        "Name": "Dheeraj Pathak",
+        "Designation": "Basketball Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169169287144030238/gaya2.png?ex=65546cc0&is=6541f7c0&hm=284bb7b60d089716f8e4352a23615ad5181aaf2ce6a14eba2ce36d4a5f4e575e&=&width=380&height=380"
+    },
+    {
+        "Name": "Jessica Poona",
+        "Designation": "Volleyball Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169169794222784572/jessie.png?ex=65546d39&is=6541f839&hm=a693765d4cfad95ccf746cf3e61b8fc9c2ee5614f6ab3a44a47905359b2b6786&=&width=380&height=380"
     }
 ]
