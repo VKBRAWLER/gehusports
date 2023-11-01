@@ -10,7 +10,7 @@ const FormBox = (params) => {
     return <FormCategory parameter={params.parameter} name={params.name} colortheme={params.colortheme}/> 
   }
   else if (params.parameter === 'UPI ID (payment proof)') {
-    return <FormUPI parameter={params.parameter} name={params.name} colortheme={params.colortheme} QR={params.QR} />
+    return <FormUPI parameter={params.parameter} name={params.name} colortheme={params.colortheme} amount={params.amount} QR={params.QR} />
   }
   else {
     return <FormInput parameter={params.parameter} name={params.name} colortheme={params.colortheme}/>
@@ -67,6 +67,7 @@ const FormUPI = (params) => {
     <label className={`FormLabel text-${params.colortheme}`} htmlFor={params.parameter.replace(/\s/g, "")}>{params.parameter}:</label>
     <input className='FormInput' name={params.name} type="text" id={params.parameter.replace(/\s/g, "")} required />
     </div>
+    <h3 className={`text-center font-bold text-xl md:text-3xl ntexts text-${params.colortheme}`}>{params.amount}</h3>
     <div className="FormDiv">
       <img src={params.QR} alt="" className='w-full h-full p-10'/>
     </div>

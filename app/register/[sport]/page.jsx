@@ -44,11 +44,11 @@ function RegistrationForm({params}) {
         <h3 className='text-2xl font-bold w-full text-center sm:text-3xl texts'>{params.sport.toUpperCase()} Tournament Registration Form</h3>
         <form id='form-box' className={`bg-${colortheme}-200 py-10 rounded-2xl m-5 w-[calc(100%-2.5rem)] bg-opacity-30 max-w-3xl min-h-full`} action={RegisterList.Form}>
         {Object.entries(RegisterList).map(([key, value], index) => {
-            if (key === 'SportsName' || key === 'Form' || key === 'QR') {
+            if (key === 'SportsName' || key === 'Form' || key === 'QR' || key === 'Amount') {
                 return null;
             }
             else if (value) {
-                return <FormBox parameter={key} name={value} colortheme={textcolor} QR={RegisterList.QR} key={index} />
+                return <FormBox parameter={key} name={value} colortheme={textcolor} QR={RegisterList.QR} amount={RegisterList.Amount} key={index} />
             }
         })}
         {/* https://www.geeksforgeeks.org/javascript-object-entries-method/ */}

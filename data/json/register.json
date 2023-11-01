@@ -10,7 +10,8 @@
         "Year": "entry.2093456979",
         "Category": "entry.370149229",
         "UPI ID (payment proof)": "entry.139421432",
-        "QR": 0,
+        "Amount": "\u20b9 100/- for below 80 & \u20b9 150/- for above 80",
+        "QR": "https://media.discordapp.net/attachments/1162451241872412901/1169142818342715402/Untitled-1-01.png?ex=65545419&is=6541df19&hm=8a786424ef0da2bc2baafb80f67fc36ef3b51c15b1a95a3a897ab8d6a93a5373&=&width=641&height=662",
         "Form": "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTDz8QcD_uvCC7TjIVf7GTRBaw-EX-jZG8UVXg-aamZSvGAw/formResponse"
     },
     {
@@ -24,6 +25,7 @@
         "Year": "entry.2093456979",
         "Category": 0,
         "UPI ID (payment proof)": "entry.139421432",
+        "Amount": "\u20b9 1000/- only",
         "QR": "https://media.discordapp.net/attachments/1162745234011193385/1169037859441881188/qrcode_football.png?ex=6553f259&is=65417d59&hm=1156c74f4629af841d511860e8448891701504655c4211867a0ad98c9e9f0b90&=&width=641&height=662",
         "Form": "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf9-Q_vF_QVRrdXY9HXCF3eCeBwDA0olHFmglHlvaehmm6kkw/formResponse"
     },
@@ -38,6 +40,7 @@
         "Year": "entry.2093456979",
         "Category": 0,
         "UPI ID (payment proof)": "entry.139421432",
+        "Amount": "\u20b9 1500/- only",
         "QR": "https://media.discordapp.net/attachments/1162745234011193385/1169037859093741680/qrcode_cricket.png?ex=6553f259&is=65417d59&hm=56040d91b723321ccc0474f110e591154d6a56618480db75155a95eb011cea36&=&width=641&height=662",
         "Form": "https://docs.google.com/forms/u/0/d/e/1FAIpQLScSKWrjiRruxbDUnELXAddEQw55am7JlyizTxYljnzwg7KWsQ/formResponse"
     }

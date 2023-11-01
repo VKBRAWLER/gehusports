@@ -7,7 +7,12 @@
     {
         "Name": "Varun Kharkwal",
         "Designation": "Web Development",
-        "Image": 0
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169148883293708400/dev.png?ex=655459bf&is=6541e4bf&hm=819f02c8367058cc2db46caf3a96aaa9489dded0fe46bbd1315fe78aa3dad846&=&width=380&height=380"
+    },
+    {
+        "Name": "Rishabh Singhal",
+        "Designation": "Basketball Co-ordinator",
+        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169148446037524590/singal.png?ex=65545957&is=6541e457&hm=cda6b1817a34c9478491dcdeed09606809c069bc99f6163456af737b14982287&"
     },
     {
         "Name": "Amit Bisht",
@@ -15,12 +20,12 @@
         "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169131684541779978/disipline.png?ex=655449bb&is=6541d4bb&hm=c1d72e460028dd82b3d04417e0276a6fe5078697442fcd78145aa38e44e9692a&"
     },
     {
-        "Name": 0,
-        "Designation": "Chess Co-ordinator",
+        "Name": "Apoorav",
+        "Designation": "Table Tennis Co-ordinator",
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130891839287306/chessco.png?ex=655448fe&is=6541d3fe&hm=224232f75ee3e45f1f302cabc4382f97e465e74d17e4bf87c36288a5acc59a1f&=&width=380&height=380"
     },
     {
-        "Name": 0,
+        "Name": "Yuvraj Singh",
         "Designation": "Cricket Co-ordinator",
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130892166430730/cricketco.png?ex=655448fe&is=6541d3fe&hm=3a703ee136e34d99d6f260a30b0f6708745b832f430b288921530a628ca624e4&=&width=380&height=380"
     },
@@ -33,5 +38,10 @@
         "Name": "Priyanshu kulyal",
         "Designation": "Football Co-ordinator",
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169134082362441779/football.png?ex=65544bf6&is=6541d6f6&hm=aef1441d9656da9db6071c6d2a2607dd17f8b1995b64c21f142d9a117fe5c2eb&=&width=380&height=380"
+    },
+    {
+        "Name": "Gayatri Bisht",
+        "Designation": "Table Tennis Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169146090797408256/gay.png?ex=65545725&is=6541e225&hm=ad839237ccb5996c9575a99f2d37193e59b383a6b59c0a4d1aa559ff3983f9ce&=&width=380&height=380"
     }
 ]
