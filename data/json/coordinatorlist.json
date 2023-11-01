@@ -53,5 +53,15 @@
         "Name": "Jessica Poona",
         "Designation": "Volleyball Co-ordinator",
         "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169169794222784572/jessie.png?ex=65546d39&is=6541f839&hm=a693765d4cfad95ccf746cf3e61b8fc9c2ee5614f6ab3a44a47905359b2b6786&=&width=380&height=380"
+    },
+    {
+        "Name": "Kamlesh Kaniyal",
+        "Designation": "Cricket Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169227787199053894/kamlesh_kaniyal.png?ex=6554a33b&is=65422e3b&hm=2340ce8c17d03dee81d7ed6beb788e008fca7d12ffb7a3b53935da73dac4b1ff&=&width=380&height=380"
+    },
+    {
+        "Name": "Rahul Rauleta",
+        "Designation": "Volleyball Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169227786918043698/land.png?ex=6554a33b&is=65422e3b&hm=1c6018c123d4f2895d36861b46ffc0c6f633e0f943f7f9c33cb747b37625ac04&=&width=380&height=380"
     }
 ]
