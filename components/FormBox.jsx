@@ -45,17 +45,23 @@ const FormCategory = (params) => {
   return (
     <div className='FormDiv'>
     <label className={`FormLabel text-${params.colortheme}`}>{params.parameter}:</label>
-    <div className='flex justify-evenly w-full'>
+    <div className='md:flex justify-evenly w-full'>
+      <section className='flex justify-evenly w-full'>
+      <div className=''><label className={`FormLabel text-${params.colortheme} cursor-pointer select-none`} htmlFor='55-60'>55-60</label>
+      <input id='1st' className='cursor-pointer' name={params.name} type='radio' value='60-65' required /></div>
       <div className=''><label className={`FormLabel text-${params.colortheme} cursor-pointer select-none`} htmlFor='60-65'>60-65</label>
       <input id='1st' className='cursor-pointer' name={params.name} type='radio' value='60-65' required /></div>
       <div className=''><label className={`FormLabel text-${params.colortheme} cursor-pointer select-none`} htmlFor='60-65'>65-70</label>
       <input id='2nd' className='cursor-pointer' name={params.name} type='radio' value='60-65' required /></div>
+      </section>
+      <section className='flex justify-evenly w-full'>
       <div className=''><label className={`FormLabel text-${params.colortheme} cursor-pointer select-none`} htmlFor='70-75'>70-75</label>
       <input id='3rd' className='cursor-pointer' name={params.name} type='radio' value='70-75' required /></div>
       <div className=''><label className={`FormLabel text-${params.colortheme} cursor-pointer select-none`} htmlFor='75-80'>75-80</label>
       <input id='4th' className='cursor-pointer' name={params.name} type='radio' value='75-80' required /></div>
       <div className=''><label className={`FormLabel text-${params.colortheme} cursor-pointer select-none`} htmlFor='80<'>80&lt;</label>
       <input id='4th' className='cursor-pointer' name={params.name} type='radio' value='80<' required /></div>
+      </section>
     </div>
   </div>
     )
