@@ -2,7 +2,7 @@ export default function calculateTimeLeft(targetTime) {
     const difference = (+new Date(targetTime)) - (+new Date());
     // console.log(JSON.stringify(targetTime), difference); '2023-10-29T08:55:00.00'
     const timeLeft = {
-        days: 0,    
+        days: 0,
         hours: 0,
         minutes: 0,
         seconds: 0,

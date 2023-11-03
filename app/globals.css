@@ -11,6 +11,7 @@
     font-family: Roboto_Slab;
     src: url('/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf');
 }
+
 body {
     background-image: url('https://www.gehu.ac.in/assets/GEHU-BTL-b80ef66e.jpg');
     background-size: cover;
@@ -19,62 +20,67 @@ body {
     background-position: center;
     font-family: Roboto_Slab;
 }
+
 main {
     width: 100%;
     min-height: calc(100vh - 6rem);
 }
+
 .texts {
     text-shadow: 0px 0px 5px var(--white-color);
 }
+
 .ntexts {
     text-shadow: 0px 0px 5px var(--black-color);
 }
+
 .btexts {
     text-shadow: 4px 5px 0px var(--black-color);
 }
+
 .wtexts {
     text-shadow: 4px 5px 0px var(--white-color);
 }
-.boxani{
-    transform: scale(1.25) rotateY(360deg);
-}
-@media screen and (min-width: 1100px) {
-    .order-n {
-        order: 3;
-        width: 450px;
-        height: 500px;
-    }
-}
+
 .boss {
     @apply max-w-sm md:w-3/4 overflow-hidden bg-white;
 }
+
 #form-box {
     box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
 }
+
 .mem {
     box-shadow: 8px 10px 3px rgb(0, 0, 0, 0.8);
 }
+
 .cusgrid{
     display: grid;
     grid-template-columns: 6rem 1fr 6rem; 
 }
+
 @media screen and (max-width: 640px) {
     .cusgrid{
         grid-template-columns: 4rem 1fr 4rem;
     } 
 }
+
 .fixedbgvideo {
     @apply top-0 bottom-0 left-0 right-0 fixed z-0 flex justify-center items-center;
 }
+
 .fixedbgvideo > video {
     @apply max-w-none min-h-screen xl:min-w-full;
 }
+
 .screenbgvideo {
     @apply top-0 bottom-0 left-0 right-0 absolute z-0 flex justify-center items-center overflow-hidden;
 }
+
 .screenbgvideo > video {
     @apply xl:w-full h-full xl:h-auto w-auto max-w-none;
 }
+
 .tri-left{
     position: absolute;
     bottom: 0;
@@ -85,6 +91,7 @@ main {
     border-bottom-color: var(--white-color);
     border-left-color: var(--white-color);
 }
+
 .tri-right{
     position: absolute;
     bottom: 0;
@@ -95,24 +102,26 @@ main {
     border-bottom-color: var(--white-color);
     border-right-color: var(--white-color);
 }
+
 .FormDiv {
     @apply flex flex-wrap justify-center items-center mb-5 sm:justify-start sm:m-10;
 }
+
 .FormLabel {
-    /* -webkit-text-stroke: #000; */
-    /* -webkit-text-stroke-width: 0.6px; */
-    /* text-shadow: 0px 0px 5px var(--black-color); */
     @apply w-full font-bold px-2 text-center sm:text-left sm:text-2xl;
 }
+
 .FormInput {
     @apply h-7 px-2 rounded w-3/4 sm:mx-2 sm:w-full md:h-10 md:text-xl;
     box-shadow: 6px 6px 10px rgb(15, 4, 4, 1);
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input[type='radio']:after {
     width: 100%;
     height: 100%;
