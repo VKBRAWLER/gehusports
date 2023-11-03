@@ -10,19 +10,19 @@ async function importion() {
 
 const TestPage = async () => {
     const events = await importion()
-  return (
-    <>
-    <div className='w-full text-center uppercase text-5xl'>TestPage</div>
-    {events.map((event, index) => {
-        return (
-            <div key={index} className='w-full text-white uppercase text-5xl'>{index+1}. {event.displayName}
-             <img src={event.displayIcon} alt="" />
-            </div>
-        )
-    })
-    }
-    </>
+    return (
+        <>
+            <div className='w-full text-center uppercase text-5xl'>TestPage</div>
+            {events.map((event, index) => {
+                return (
+                    <div key={index} className='w-full text-white uppercase text-5xl'>{index + 1}. {event.displayName}
+                        <img src={event.displayIcon} alt="" />
+                    </div>
+                )
+            })
+            }
+        </>
     )
 }
 
-export default TestPage
+export default TestPage;

@@ -1,5 +1,5 @@
-import '@app/globals.css'
-import Header from '@components/Header'
+import '@app/globals.css';
+import Header from '@components/Header';
 
 export const metadata = {
   title: 'Sports Website for Graphic Era Hill University',
@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Header/>
+        <Header />
         {children}
       </body>
     </html>
