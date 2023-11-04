@@ -1,23 +1,41 @@
 import Content from "@components/Content";
-const RulesPage = () => {
+const SportsRules = () => {
 	return (
-		<main>
-			<h1 className='w-full text-center font-extrabold text-3xl sm:text-5xl texts relative'>Rules for Umang Khel Mahaatsav</h1>
-			{Content.Rules.map((i) => {
-				return (
-					<section className="border-8 rounded-lg my-10 md:mx-20 p-5 bg-green-500 bg-opacity-40">
-						<h3 className="text-white text-3xl">{i.name.toUpperCase()}</h3>
-						<ul className="list-decimal list-inside text-xl text-white">
-							{i.rules.map((j) => {
-								return (
-									<li>{j}</li>
-								)
-							})}
-						</ul>
-					</section>
-				)
-			})}
-		</main>
-	)
-}
-export default RulesPage;
+		<div className="container mx-auto p-4">
+			<h1 className="text-2xl texts md:text-4xl font-bold text-center mb-8">Rules Regarding Sports Played in Umang Khel Mahotsav</h1>
+			{Content.Rules.map((sport) => (
+				<div key={sport.name} className="bg-green-200 shadow-lg rounded-lg overflow-hidden mb-4">
+					<div className="p-4">
+						<h2 className="text-3xl font-semibold text-gray-800">{sport.name}</h2>
+						{sport.rules && <><h3 className="text-2xl font-medium text-gray-600 mt-4">RULES</h3>
+						<ol className="list-decimal list-inside text-gray-700 mt-2">
+							{sport.rules.map((point) => (
+								<li key={point} className="mt-1">{point}</li>
+							))}
+						</ol>
+						</>}
+						{sport.points && <><h3 className="text-2xl font-medium text-gray-600 mt-4">Points to Remember</h3>
+						<ol className="list-disc list-inside text-gray-700 mt-2">
+							{sport.points.map((point) => (
+								<li key={point} className="mt-1">{point}</li>
+							))}
+						</ol>
+						</>}
+						{sport.ground && <>
+						<h3 className="text-2xl font-medium text-gray-600 mt-4">Ground Requirements</h3>
+							<ol className="list-disc list-inside text-gray-700 mt-2">
+								{sport.ground.map((requirement) => (
+									<li key={requirement} className="mt-1">
+										{requirement}
+									</li>
+								))}
+							</ol>
+						</>}
+					</div>
+				</div>
+			))}
+		</div>
+	);
+};
+
+export default SportsRules;
