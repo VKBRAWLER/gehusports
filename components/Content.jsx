@@ -11,7 +11,6 @@ const Content = {
         {
             'name': 'cricket',
             'link': 'https://cdn.discordapp.com/attachments/1162451241872412901/1168974180105076847/steptodown.com_274009.mp4?ex=6553b70b&is=6541420b&hm=50905645b4f14fe401f169639713cd57f1445cb09ccec1e38d045ddf3809b920&',
-            'paymentqr': '',
         },
         {
             'name': 'football',
@@ -20,6 +19,47 @@ const Content = {
         {
             'name': 'armwrestling',
             'link': 'https://cdn.discordapp.com/attachments/1162451241872412901/1168961840429154444/steptodown.com_855790.mp4?ex=6553ab8d&is=6541368d&hm=650b4852f8cfdff1b478f730fef5a89d707d056ef020e2f2cac31b5fd1541faf&',
+        },
+    ],
+    Rules: [
+        {
+            'name': 'cricket',
+            'rules': [
+                'The match will be played with a tennis ball.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+            ],
+            'PTR': [
+                'The match will be played with a tennis ball.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+            ]
+        },
+        {
+            'name': 'football',
+            'rules': [
+                'The match will be played with a tennis ball.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+            ],
+        },
+        {
+            'name': 'armwrestling',
+            'rules': [
+                'The match will be played with a tennis ball.',
+                'The match will be played with 8 players per team.',
+                'The match will be played with 8 overs per innings.',
+            ],
         },
     ]
 }
