@@ -4,7 +4,7 @@ const SportsRules = () => {
 		<div className="container mx-auto p-4">
 			<h1 className="text-2xl texts md:text-4xl font-bold text-center mb-8">Rules Regarding Sports Played in Umang Khel Mahotsav</h1>
 			{Content.Rules.map((sport) => (
-				<div key={sport.name} className="bg-green-200 shadow-lg rounded-lg overflow-hidden mb-4">
+				<div id={sport.name} key={sport.name} className="bg-green-200 shadow-lg rounded-lg overflow-hidden mb-4">
 					<div className="p-4">
 						<h2 className="text-3xl font-semibold text-gray-800">{sport.name}</h2>
 						{sport.rules && <><h3 className="text-2xl font-medium text-gray-600 mt-4">RULES</h3>

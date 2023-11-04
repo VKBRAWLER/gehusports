@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import FullScreenVideo from '@components/FullScreenVideo';
 import Register from '@data/json/register.json';
 import Content from '@components/Content';
+import NotFound from '@app/not-found';
 const RegistrationForm = ({ params }) => {
 	const [sportsBGVideo, setSportsBGVideo] = useState(null);
 	const [RegisterList, setRegisterList] = useState([]);
@@ -37,7 +38,7 @@ const RegistrationForm = ({ params }) => {
 			setTextcolor('black');
 		}
 	}, [])
-	return (
+	if (params.sport.toLowerCase() === 'armwrestling'){return (
 		<>
 			<FullScreenVideo link={sportsBGVideo} type={'fixedbgvideo'} />
 			<main className='flex flex-wrap justify-center items-center relative z-10'>
@@ -59,6 +60,12 @@ const RegistrationForm = ({ params }) => {
 			</main>
 		</>
 	);
+	}
+	else {
+		return <main>
+			<p className='text-center text-2xl md:text-4xl pt-20'>Registration Closed !!!</p>
+		</main>
+	}
 }
 
 export default RegistrationForm;
