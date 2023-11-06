@@ -71,7 +71,7 @@ const Content = {
             ground: null,
         },
         {
-            name: "Arm-Wrestling",
+            name: "ArmWrestling",
             rules: [
                 "Those  student  who's  arm wrestling  match  on Monday should came in Gehu t-shirt , lower & sports shoes.",
                 "Refrees decision will  consider as a final decision.",                
