@@ -1,5 +1,5 @@
 "use client";
-import { useSearchParams } from 'next/navigation';
+import { useParams, usePathname, useSearchParams } from 'next/navigation';
 import SportsList from '@components/SportsList';
 import NotFound from '@app/not-found';
 import Link from 'next/link';
@@ -13,6 +13,10 @@ const EventsPage = ({ params }) => {
 	if (!(params.status === 'UPCOMING' || params.status === 'ONGOING' || params.status === 'COMPLETED')) {
 		return <NotFound />
 	}
+	const paramss = useSearchParams();
+	const paramsss = useParams();
+	const pathname = usePathname()
+	console.log(paramss.get('filter'), paramsss	, pathname);
 	return (
 		<main>
 			<section className='w-full px-3 sm:px-10'>
