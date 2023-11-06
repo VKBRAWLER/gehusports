@@ -27,8 +27,8 @@
         "Sdate": "2023-11-06T00:00:00",
         "Edate": "2023-11-08T24:00:00",
         "Cimage": "https://media.discordapp.net/attachments/1162451241872412901/1169125542570770482/arm_wrestling-01.png?ex=65544402&is=6541cf02&hm=1991735d7c868497baaf3d08d617fe93f8f4193708e878fc2d632ec13d487456&=&width=606&height=662",
-        "UPCOMING": 1,
-        "ONGOING": 0,
+        "UPCOMING": 0,
+        "ONGOING": 1,
         "COMPLETED": 0,
         "TAG": "i"
     },
@@ -74,6 +74,6 @@
         "UPCOMING": 1,
         "ONGOING": 0,
         "COMPLETED": 0,
-        "TAG": "x"
+        "TAG": "i"
     }
 ]
