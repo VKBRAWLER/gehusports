@@ -3,11 +3,13 @@ import { Schema, model, models } from "mongoose";
 const EventsSchema = new Schema({
     _id: {
         type: String,
-        require: true,
+        unique: [true, 'event_code is already exists'],
+        require: [true, 'event_code is required'],
     },
     title: {
         type: String,
-        require: true,
+        unique: [true, 'title is already exists'],
+        require: [true, 'title is required'],
     },
     start_date: {
         type: Date,
@@ -36,7 +38,7 @@ const EventsSchema = new Schema({
     created_by: {
         type: String,
         default: 'admin',
-        require: true,
+        require: [true, 'Login is required'],
     },
     updated_at: {
         type: Date,
