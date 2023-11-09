@@ -1,6 +1,5 @@
 "use client";
 import ArticleBox from "@components/ArticleBox";
-import new_event from "@data/json/new_events.json";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -19,7 +18,6 @@ const EventsPageParams = () => {
 		const response = await fetch(`/api/sports/${event_code}`);
 		const data = await response.json();
 		setSportsList(data);
-		console.log(data);
 	}
 	useEffect(() => {
 		Searchevent_code(event_code);
