@@ -21,11 +21,11 @@ const EventsSchema = new Schema({
     },
     poster_image: {
         type: String,
-        default: '',
+        default: null,
     },
     bg_image: {
         type: String,
-        default: '',    
+        default: null,    
     },
     visible: {
         type: Boolean,
@@ -37,14 +37,12 @@ const EventsSchema = new Schema({
     },
     created_by: {
         type: String,
-        default: 'admin',
         require: [true, 'Login is required'],
     },
     updated_at: {
         type: Date,
         default: Date.now,
     },
-
 },
     { versionKey: false });
 
