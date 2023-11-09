@@ -14,3 +14,10 @@ export async function GET(request) {
     const events = await Events.find({}); // find all events
     return NextResponse.json(events, {status: 200}); // return the response
 }
+
+export async function DELETE(request) {
+    const { _id } = await request.json();
+    await ConnectToDB();
+    await Events.deleteOne({ _id });
+    return NextResponse.json({ message: "Event deleted successfully" }, { status: 200 });
+}
