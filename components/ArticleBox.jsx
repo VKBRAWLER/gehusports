@@ -1,11 +1,13 @@
 import { calculateTimeLeft, DateString, TimeString } from "@func/Time";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 const ArticleBox = (j) => {
 	j = j.obj;
 	const [h1, seth1] = useState("Comming Soon...");
 	const [span, setspan] = useState("?? / ?? / ????");
 	const [btn, setbtn] = useState(false);
 	const [btn_text, setbtn_text] = useState("Registration");
+	const [btn_link, setbtn_link] = useState(`/events/${j.event_code}/${j._id}`);
 	const upadateArticles = (j) => {
 		if (j.start_date) {
 			const Sdate = new Date(j.start_date);
@@ -17,6 +19,7 @@ const ArticleBox = (j) => {
 				if (btn) {
 					seth1("Registration Closing in...");
 					setspan(TimeString(time_left));
+					setbtn_link(`/events/${j.event_code}/${j._id}/register`);
 				}
 			}
 			else {
@@ -49,7 +52,7 @@ const ArticleBox = (j) => {
 			{/* <span className="text-lg font-semibold">3d 2hr 23min</span> */}
 			{/* <span className="text-lg font-semibold">?? / ??? / ????</span> */}
 			<span className="text-lg font-semibold">{span}</span>
-			{btn && <button className="absolute bottom-2 right-2 bg-blue-400 p-2 rounded-xl">{btn_text}</button>}
+			{btn && <Link href={btn_link} className="absolute bottom-2 right-2 bg-blue-400 p-2 rounded-xl">{btn_text}</Link>}
 		</article>
 	)
 }
