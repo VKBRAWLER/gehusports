@@ -1,18 +1,8 @@
 "use client";
-import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-import { useEffect, useState } from "react";
-
+import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 const AdminPage = () => {
   const {data: session} = useSession();
-  const [providers, setProviders] = useState(null);
-  useEffect(() => {
-    const setUpProviders = async () => {
-      const response = await getProviders();
-      setProviders(response);
-    }
-    setUpProviders();
-  }, [])
-  // console.log(providers);
   return (
     <>
     {session?.user ?
@@ -27,13 +17,7 @@ const AdminPage = () => {
   :
   <>
   <p className="text-center text-3xl">Please Login to access this page</p>
-  {providers && Object.values(providers).map((provider) => {
-    return (
-      <div key={provider.name}>
-        <button onClick={() => signIn(provider.id)} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</button>
-      </div>
-    )
-  })}
+  <Link href={'/admin/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
   </>
   }
   </>
