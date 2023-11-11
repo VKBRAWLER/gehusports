@@ -8,8 +8,7 @@ const UserSchema = new Schema({
   },
   name: {
     type: String,
-    required: [true, 'Please add a name'],
-    match: [/^[a-zA-Z]+$/, 'Name can only consist of letters'],
+    required: [true, 'Please provide your name'],
   },
   image: {
     type: String,
@@ -17,11 +16,11 @@ const UserSchema = new Schema({
   role: {
     type: String,
   },
-  createdAt: {
+  created_at: {
     type: Date,
     default: Date.now,
   },
-  verfied: {
+  is_verfied: {
     type: Boolean,
     default: false,
   },
