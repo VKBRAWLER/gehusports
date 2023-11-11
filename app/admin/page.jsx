@@ -1,9 +1,9 @@
 import Providers from "@components/Provider";
-import AdminWlecome from "@components/AdminWelcome";
+import AdminWelcome from "@components/AdminWelcome";
 const AdminPage = () => {
   return (
     <Providers>
-    <AdminWlecome />
+    <AdminWelcome />
     </Providers>
   )
 }
