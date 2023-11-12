@@ -8,7 +8,9 @@ const UserSchema = new Schema({
   },
   name: {
     type: String,
-    required: [true, 'Please provide your name'],
+  },
+  password: {
+    type: String,
   },
   image: {
     type: String,
@@ -28,6 +30,10 @@ const UserSchema = new Schema({
     type: Array,
     default: [],
   },
+  forgot_password_token: String,
+  forgot_password_token_expires: Date,
+  verify_token: String,
+  verify_token_expires: Date,
 });
 
 const User = models.User || model('User', UserSchema);
