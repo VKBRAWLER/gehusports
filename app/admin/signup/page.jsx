@@ -19,6 +19,10 @@ const SignUpPage = () => {
   }, [session])
   const signUp = async () => {
     const response = await fetch('/api/users/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({email, password})
     })
     const data = await response.json();
@@ -92,6 +96,9 @@ const SignUpPage = () => {
         }
   else {
     router.push('/admin');
+    return (
+      <div></div>
+    )
   }
 };
 

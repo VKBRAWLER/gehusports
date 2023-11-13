@@ -41,9 +41,13 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
  getting = 'Light';
 }
 
-CheckList:
-Event's Raw Poster need to be added on event page from event.xlsx
-Faculty Image & Quote
-Coordinator's Image & Details
-Check BackEnd for all the data
-Scanner for Arm Wrestling
+the session returns an object that has two keys
+1. user: the user object
+2. expires: the time when the session expires
+the user is also an object that has following keys
+1. email: the email of the user
+2. name: the name of the user
+3. image: the image of the user
+4. id: the id of the user
+whereas the expires is a number that represents the time in milliseconds when the session expires
+which is set to 24 hours from the signin time
