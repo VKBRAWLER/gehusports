@@ -1,7 +1,10 @@
 import AdminWelcome from "@components/AdminWelcome";
+import Auth from "@components/Auth";
 const AdminPage = () => {
   return (
-    <AdminWelcome />
+    <Auth>
+      <AdminWelcome />
+    </Auth>
   )
 }
 
