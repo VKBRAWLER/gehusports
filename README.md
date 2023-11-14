@@ -51,3 +51,5 @@ the user is also an object that has following keys
 4. id: the id of the user
 whereas the expires is a number that represents the time in milliseconds when the session expires
 which is set to 24 hours from the signin time
+
+the session is stored in the cookies of the browser
