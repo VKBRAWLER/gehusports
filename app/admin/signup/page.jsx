@@ -30,8 +30,11 @@ const SignUpPage = () => {
       alert(data.error);
     }
     else {
-      alert('Sign up successful');
-      router.push('/admin');
+      signIn('credentials', {
+        email: email,
+        // callbackUrl: false,
+        callbackUrl: `${window.location.origin}/admin`
+      })
     }
   }
   const checkForm = () => {
@@ -82,6 +85,7 @@ const SignUpPage = () => {
         <div className="mt-4 text-center">
           <p className="text-gray-500 text-sm">Or sign up with</p>
           {providers && Object.values(providers).map((provider) => {
+            if (provider.id === 'credentials') return null;
             return (
               <button onClick={() => signIn(provider.id)} className="bg-red-500 text-white py-2 px-4 mt-2 rounded" key={provider.name}>{provider.name}</button>
             )
