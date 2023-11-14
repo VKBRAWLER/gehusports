@@ -1,44 +1,39 @@
-import NextAuth from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
-import { ConnectToDB } from '@utils/database';
-import User from '@models/user';
-const handler = NextAuth({
+import User from "@models/user";
+import { ConnectToDB } from "@utils/database";
+import { connect } from "mongoose";
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+const authOptions = {
+  session: {
+    strategy: "jwt",
+  },
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    })
+    CredentialsProvider({
+      type: "credentials",
+      async authorize(credentials, req) {
+        const { email } = credentials;
+        ConnectToDB();
+        const user = await User.findOne({ email });
+        return user;
+      },
+    }),
   ],
+  pages: {
+    signIn: "/auth/signin",
+    // error: '/auth/error',
+    // signOut: '/auth/signout'
+  },
   callbacks: {
-    async session({ session }) {
-      // store the user id from MongoDB to session
-    const sessionUser = await User.findOne({ email: session.user.email });
-    session.user.id = sessionUser._id.toString();
-    return session;
-    },
-    async signIn({ account, profile, user, credentials }) {
-      try {
-        await ConnectToDB();
-
-        // check if user already exists
-        const userExists = await User.findOne({ email: profile.email });
-
-        // if not, create a new document and save user in MongoDB
-        if (!userExists) {
-          await User.create({
-            email: profile.email,
-            name: profile.name.replace(" ", "").toLowerCase(),
-            image: profile.picture,
-          });
-        }
-
-        return true
-      } catch (error) {
-        console.log("Error checking if user exists: ", error.message);
-        return false
+    jwt(params) {
+      // update token
+      if (params.user?.role) {
+        params.token.role = params.user.role;
       }
+      // return final_token
+      return params.token;
     },
-  }
-})
+  },
+};
 
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST }

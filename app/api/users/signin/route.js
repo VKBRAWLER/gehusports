@@ -12,14 +12,14 @@ export async function POST(NextRequest) {
     console.log(reqBody);
     const userExist = await User.findOne({ email });
     if (!userExist) {
-      return NextResponse.json({error: 'User does not Exist', success: false}, {status: 400});
+      return NextResponse.json({message: 'User does not Exist', success: false}, {status: 400});
     }
     const validPassword = await bcrypt.compare(password, userExist.password);
     if (!validPassword) {
-      return NextResponse.json({error: 'Invalid Password', success: false}, {status: 400});
+      return NextResponse.json({message: 'Invalid Password', success: false}, {status: 400});
     }
     return NextResponse.json({message: "User Logged In Successfully", success: true}, {status: 201});
   } catch (error) {
-    return NextResponse.json({error: error.message, success: false}, {status: 500});
+    return NextResponse.json({message: error.message, success: false}, {status: 500});
   }
 }

@@ -25,12 +25,15 @@ const SignInPage = () => {
       body: JSON.stringify({email, password})
     })
     const data = await response.json();
-    if (data.error) {
-      alert(data.error);
+    if (!data.success) {
+      alert(data.message);
     }
     else {
-      alert('Sign up successful');
-      router.push('/admin');
+      signIn('credentials', {
+      email: email,
+      // callbackUrl: false,
+      callbackUrl: `${window.location.origin}/admin`
+      })
     }
   }
   const checkForm = () => {
