@@ -1,6 +1,6 @@
 "use client";
 import { useParams, usePathname, useSearchParams } from 'next/navigation';
-import SportsList from '@components/SportsList';
+import SportsList from '@pages/SportsList';
 import NotFound from '@app/not-found';
 import Link from 'next/link';
 import { RxCross2 } from 'react-icons/rx';
