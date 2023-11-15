@@ -6,23 +6,20 @@ function Auth({ children }) {
   const { status } = useSession();
   if (status === "authenticated") {
     return (
-      <>
-        {children}
-      </>
+      <>{children}</>
     );
   }
   if (status === "unauthenticated") {
     return (
-      <div>
-        You must be signed in to access this page
-  <Link href={'/admin/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
-
-      </div>
+      <main>
+        <h1 className="text-center text-3xl">You must be signed in to access this page</h1>
+        <Link href={'/admin/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
+      </main>
     );
   }
 
   return (
-      <Loading />
+    <Loading />
   );
 }
 

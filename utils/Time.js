@@ -17,7 +17,7 @@ export function calculateTimeLeft(targetTime) {
     return timeLeft;
 }
 
-export function DateString (Gdate) {
+export function DateString(Gdate) {
     let month = Gdate.getMonth()
     if (month < 10) {
         month = `0${month}`
@@ -30,7 +30,7 @@ export function DateString (Gdate) {
     return DString;
 }
 
-export function TimeString (timeLeft) {
+export function TimeString(timeLeft) {
     let days = timeLeft.days;
     if (!days) {
         days = '';

@@ -74,7 +74,7 @@ const Content = {
             name: "Arm-Wrestling",
             rules: [
                 "Those  student  who's  arm wrestling  match  on Monday should came in Gehu t-shirt , lower & sports shoes.",
-                "Refrees decision will  consider as a final decision.",                
+                "Refrees decision will  consider as a final decision.",
                 "There will be 3 rounds who will  win 2 rounds that player won the match.",
                 "Type of tournament is knock out.",
                 "Type of tournament is knock out.",

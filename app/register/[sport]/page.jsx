@@ -38,28 +38,29 @@ const RegistrationForm = ({ params }) => {
 			setTextcolor('black');
 		}
 	}, [])
-	if (params.sport.toLowerCase() === 'armwrestling'){return (
-		<>
-			<FullScreenVideo link={sportsBGVideo} type={'fixedbgvideo'} />
-			<main className='flex flex-wrap justify-center items-center relative z-10'>
-				<h3 className='text-2xl font-bold w-full text-center sm:text-3xl texts'>{params.sport.toUpperCase()} Tournament Registration Form</h3>
-				<form id='form-box' className={`bg-${colortheme}-200 py-10 rounded-2xl m-5 w-[calc(100%-2.5rem)] bg-opacity-30 max-w-3xl min-h-full`} action={RegisterList.Form}>
-					{Object.entries(RegisterList).map(([key, value], index) => {
-						if (key === 'SportsName' || key === 'Form' || key === 'QR' || key === 'Amount') {
-							return null;
-						}
-						else if (value) {
-							return <FormBox parameter={key} name={value} colortheme={textcolor} QR={RegisterList.QR} amount={RegisterList.Amount} key={index} />
-						}
-					})}
-					{/* https://www.geeksforgeeks.org/javascript-object-entries-method/ */}
-					<div onClick={() => { setSubmitting(true) }} className="w-full flex justify-center items-center h-16"><button className={`form-box bg-white h-12 px-4 rounded-2xl border-${colortheme}-200 active:bg-${colortheme}-500 hover:border-${colortheme}-400 border-4`} type="submit">{submitting ? <>Submiting..</> : <>Submit</>}</button></div>
-					<div className="sr-only text-blue-300"></div>
-					<div className="sr-only text-black"></div>
-				</form>
-			</main>
-		</>
-	);
+	if (params.sport.toLowerCase() === 'armwrestling') {
+		return (
+			<>
+				<FullScreenVideo link={sportsBGVideo} type={'fixedbgvideo'} />
+				<main className='flex flex-wrap justify-center items-center relative z-10'>
+					<h3 className='text-2xl font-bold w-full text-center sm:text-3xl texts'>{params.sport.toUpperCase()} Tournament Registration Form</h3>
+					<form id='form-box' className={`bg-${colortheme}-200 py-10 rounded-2xl m-5 w-[calc(100%-2.5rem)] bg-opacity-30 max-w-3xl min-h-full`} action={RegisterList.Form}>
+						{Object.entries(RegisterList).map(([key, value], index) => {
+							if (key === 'SportsName' || key === 'Form' || key === 'QR' || key === 'Amount') {
+								return null;
+							}
+							else if (value) {
+								return <FormBox parameter={key} name={value} colortheme={textcolor} QR={RegisterList.QR} amount={RegisterList.Amount} key={index} />
+							}
+						})}
+						{/* https://www.geeksforgeeks.org/javascript-object-entries-method/ */}
+						<div onClick={() => { setSubmitting(true) }} className="w-full flex justify-center items-center h-16"><button className={`form-box bg-white h-12 px-4 rounded-2xl border-${colortheme}-200 active:bg-${colortheme}-500 hover:border-${colortheme}-400 border-4`} type="submit">{submitting ? <>Submiting..</> : <>Submit</>}</button></div>
+						<div className="sr-only text-blue-300"></div>
+						<div className="sr-only text-black"></div>
+					</form>
+				</main>
+			</>
+		);
 	}
 	else {
 		return <main>
