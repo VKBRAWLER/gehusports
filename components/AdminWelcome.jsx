@@ -7,7 +7,7 @@ const AdminPage = () => {
 
   return (
     <>
-    {session?.user ?
+    {session &&
     <main>
       <p className="text-3xl font-bold text-center">Admin Page</p>
       <p className="text-center font-">Admin Tube</p>
@@ -17,14 +17,8 @@ const AdminPage = () => {
       <button onClick={signOut} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign Out</button>
       <p className="text-white text-5xl">{Date(session.expires)}</p>
       <p className="text-white text-5xl">{}</p>
-      
     </main>
-  :
-  <>
-  <p className="text-center text-3xl">Please Login to access this page</p>
-  <Link href={'/admin/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
-  </>
-  }
+    }
   </>
   )
 }
