@@ -18,7 +18,6 @@ const authOptions = {
         const { email } = credentials;
         await ConnectToDB();
         const user = await User.findOne({ email });
-        // console.log("user: ", user)
         return user;
       },
     }),
@@ -26,7 +25,6 @@ const authOptions = {
   callbacks: {
     async session({ session }) {
     const sessionUser = await User.findOne({ email: session.user.email });
-    console.log("sessionUser: ", sessionUser)
     session.user.id = sessionUser._id.toString();
     return session;
     },
@@ -34,21 +32,20 @@ const authOptions = {
       try {
         await ConnectToDB();
         // check if user already exists
-        const userExists = await User.findOne({ email: user.email });
+        let newUser = await User.findOne({ email: user.email });
         // if not, create a new document and save user in MongoDB
-        if (!userExists && profile) {
-          await User.create({
-            email: profile.email,
-            name: profile.name.replace(" ", "").toLowerCase(),
-            image: profile.picture,
+        if (!newUser) {
+          newUser = new User({
+            email: user.email,
           });
         }
         if (profile) {
-          const newUser = await User.findOne({ email: profile.email });
           newUser.image = await profile.picture;
-          newUser.name = await profile.name.replace(" ", "").toLowerCase();
-          await newUser.save();
+          if (!newUser.name) {
+            newUser.name = await profile.name;
+          }
         }
+        await newUser.save();
         return true
       } catch (error) {
         console.log("Error checking if user exists: ", error.message);

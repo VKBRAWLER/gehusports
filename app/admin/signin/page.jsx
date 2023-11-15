@@ -5,16 +5,19 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 const SignInPage = () => {
   const {data: session} = useSession();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [credentials, setCredentials] = useState({email: '', password: ''});
   const [providers, setProviders] = useState(null);
   const router = useRouter();
+  const updateCredentials = (e) => {
+    if (e) setCredentials({...credentials, [e.target.id]: e.target.value});
+  }
   const setUpProviders = async () => {
     const response = await getProviders();
     setProviders(response);
   }
   useEffect(() => {
     setUpProviders();
+    updateCredentials(0);
   }, [session])
   const signInCred = async () => {
     const response = await fetch('/api/users/signin', {
@@ -22,7 +25,7 @@ const SignInPage = () => {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({email, password})
+      body: JSON.stringify(credentials)
     })
     const data = await response.json();
     if (!data.success) {
@@ -30,21 +33,21 @@ const SignInPage = () => {
     }
     else {
       signIn('credentials', {
-      email: email,
+      email: credentials.email,
       // callbackUrl: false,
       callbackUrl: `${window.location.origin}/admin`
       })
     }
   }
   const checkForm = () => {
-    console.log({email, password});
-    if (email === '') {
+    updateCredentials(0);
+    if (credentials.email === '') {
       alert('Email is required');
     }
-    else if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+    else if (credentials.email.indexOf('@') === -1 || credentials.email.indexOf('.') === -1) {
       alert('Email is invalid');
     }
-    else if (password === '') {
+    else if (credentials.password === '') {
       alert('Password is required');
     }
     else {
@@ -63,11 +66,11 @@ const SignInPage = () => {
         <form>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
-            <input type="email" id="email" className="w-full border rounded py-2 px-3" onChange={(e)=>{setEmail(e.target.value)}} />
+            <input type="email" id="email" className="w-full border rounded py-2 px-3" onChange={(e)=>{updateCredentials(e)}} />
           </div>
           <div className="mb-4">
             <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">Password</label>
-            <input type="password" id="password" className="w-full border rounded py-2 px-3" onChange={(e)=>{setPassword(e.target.value)}} />
+            <input type="password" id="password" className="w-full border rounded py-2 px-3" onChange={(e)=>{updateCredentials(e)}} />
           </div>
           <button onClick={(e)=>{SubmitEvent(e)}} className="w-full bg-blue-500 text-white py-2 px-4 rounded">Sign In</button>
         </form>

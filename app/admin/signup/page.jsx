@@ -5,17 +5,20 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 const SignUpPage = () => {
   const {data: session} = useSession();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmpassword, setConfirmPassword] = useState('');
+  const [credentials, setCredentials] = useState({email: '', password: '', confirmpassword: ''});
   const [providers, setProviders] = useState(null);
   const router = useRouter();
+  const updateCredentials = (e) => {
+    if (e) setCredentials({...credentials, [e.target.id]: e.target.value});
+    console.log(credentials);
+  }
   const setUpProviders = async () => {
     const response = await getProviders();
     setProviders(response);
   }
   useEffect(() => {
     setUpProviders();
+    updateCredentials(0);
   }, [session])
   const signUp = async () => {
     const response = await fetch('/api/users/signup', {
@@ -23,7 +26,7 @@ const SignUpPage = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({email, password})
+      body: JSON.stringify(credentials)
     })
     const data = await response.json();
     if (data.error) {
@@ -31,27 +34,26 @@ const SignUpPage = () => {
     }
     else {
       signIn('credentials', {
-        email: email,
-        // callbackUrl: false,
+        email: credentials.email,
         callbackUrl: `${window.location.origin}/admin`
       })
     }
   }
   const checkForm = () => {
-    console.log({email, password, confirmpassword});
-    if (email === '') {
+    updateCredentials(0);
+    if (credentials.email === '') {
       alert('Email is required');
     }
-    else if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+    else if (credentials.email.indexOf('@') === -1 || credentials.email.indexOf('.') === -1) {
       alert('Email is invalid');
     }
-    else if (password === '') {
+    else if (credentials.password === '') {
       alert('Password is required');
     }
-    else if (password.length < 6) {
+    else if (credentials.password.length < 6) {
       alert('Password must be at least 6 characters');
     }
-    else if (password !== confirmpassword) {
+    else if (credentials.password !== credentials.confirmpassword) {
       alert('Passwords do not match');
     }
     else {
@@ -70,15 +72,15 @@ const SignUpPage = () => {
         <form>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
-            <input type="email" id="email" className="w-full border rounded py-2 px-3" onChange={(e)=>{setEmail(e.target.value)}} />
+            <input type="email" id="email" className="w-full border rounded py-2 px-3" onChange={(e)=>{updateCredentials(e)}} />
           </div>
           <div className="mb-4">
             <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">Password</label>
-            <input type="password" id="password" className="w-full border rounded py-2 px-3" onChange={(e)=>{setPassword(e.target.value)}} />
+            <input type="password" id="password" className="w-full border rounded py-2 px-3" onChange={(e)=>{updateCredentials(e)}} />
           </div>
           <div className="mb-4">
             <label htmlFor="confirmpassword" className="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
-            <input type="password" id="confirmpassword" className="w-full border rounded py-2 px-3" onChange={(e)=>{setConfirmPassword(e.target.value)}} />
+            <input type="password" id="confirmpassword" className="w-full border rounded py-2 px-3" onChange={(e)=>{updateCredentials(e)}} />
           </div>
           <button onClick={(e)=>{SubmitEvent(e)}} className="w-full bg-blue-500 text-white py-2 px-4 rounded">Sign Up</button>
         </form>
