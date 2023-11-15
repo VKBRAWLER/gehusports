@@ -1,4 +1,4 @@
-import { calculateTimeLeft, DateString, TimeString } from "@func/Time";
+import { calculateTimeLeft, DateString, TimeString } from "@utils/Time";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 const ArticleBox = (j) => {
