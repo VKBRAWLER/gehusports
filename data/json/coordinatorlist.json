@@ -1,0 +1,82 @@
+[
+    {
+        "Name": "Akhilesh Pandey",
+        "Designation": "Sport's Organizer",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130892481019985/organizer.png?ex=655448fe&is=6541d3fe&hm=230f5a32ad5badace3677a959650cb751b71e9a13058e379d1b936af8336301f&=&width=380&height=380"
+    },
+    {
+        "Name": "Varun Kharkwal",
+        "Designation": "Web Development",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169148883293708400/dev.png?ex=655459bf&is=6541e4bf&hm=819f02c8367058cc2db46caf3a96aaa9489dded0fe46bbd1315fe78aa3dad846&=&width=380&height=380"
+    },
+    {
+        "Name": "Rishabh Singhal",
+        "Designation": "Basketball Co-ordinator",
+        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169148446037524590/singal.png?ex=65545957&is=6541e457&hm=cda6b1817a34c9478491dcdeed09606809c069bc99f6163456af737b14982287&"
+    },
+    {
+        "Name": "Nishant Singh Almiya",
+        "Designation": "Sport's Organizer",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169167037944315954/gaya.png?ex=65546aa7&is=6541f5a7&hm=0e0f2e3a2fe807fae36a97e354c315e82f0d0c94fd6d45895cb057099be49491&=&width=380&height=380"
+    },
+    {
+        "Name": "Apoorav Singh",
+        "Designation": "Table Tennis Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130891839287306/chessco.png?ex=655448fe&is=6541d3fe&hm=224232f75ee3e45f1f302cabc4382f97e465e74d17e4bf87c36288a5acc59a1f&=&width=380&height=380"
+    },
+    {
+        "Name": "Yuvraj Singh",
+        "Designation": "Cricket Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169130892166430730/cricketco.png?ex=655448fe&is=6541d3fe&hm=3a703ee136e34d99d6f260a30b0f6708745b832f430b288921530a628ca624e4&=&width=380&height=380"
+    },
+    {
+        "Name": "Aaron Singh",
+        "Designation": "Chess Co-ordinator",
+        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169167038174994492/aron.png?ex=65546aa7&is=6541f5a7&hm=33907815ee270399609fb940149c876db334ffa405df6bfc56630205bfe01733&"
+    },
+    {
+        "Name": "Priyanshu kulyal",
+        "Designation": "Football Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169134082362441779/football.png?ex=65544bf6&is=6541d6f6&hm=aef1441d9656da9db6071c6d2a2607dd17f8b1995b64c21f142d9a117fe5c2eb&=&width=380&height=380"
+    },
+    {
+        "Name": "Gayatri Bisht",
+        "Designation": "Table Tennis Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169146090797408256/gay.png?ex=65545725&is=6541e225&hm=ad839237ccb5996c9575a99f2d37193e59b383a6b59c0a4d1aa559ff3983f9ce&=&width=380&height=380"
+    },
+    {
+        "Name": "Dheeraj Pathak",
+        "Designation": "Basketball Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169169287144030238/gaya2.png?ex=65546cc0&is=6541f7c0&hm=284bb7b60d089716f8e4352a23615ad5181aaf2ce6a14eba2ce36d4a5f4e575e&=&width=380&height=380"
+    },
+    {
+        "Name": "Jessica Poona",
+        "Designation": "Volleyball Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169169794222784572/jessie.png?ex=65546d39&is=6541f839&hm=a693765d4cfad95ccf746cf3e61b8fc9c2ee5614f6ab3a44a47905359b2b6786&=&width=380&height=380"
+    },
+    {
+        "Name": "Kamlesh Kaniyal",
+        "Designation": "Cricket Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169227787199053894/kamlesh_kaniyal.png?ex=6554a33b&is=65422e3b&hm=2340ce8c17d03dee81d7ed6beb788e008fca7d12ffb7a3b53935da73dac4b1ff&=&width=380&height=380"
+    },
+    {
+        "Name": "Rahul Rauleta",
+        "Designation": "Volleyball Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169227786918043698/land.png?ex=6554a33b&is=65422e3b&hm=1c6018c123d4f2895d36861b46ffc0c6f633e0f943f7f9c33cb747b37625ac04&=&width=380&height=380"
+    },
+    {
+        "Name": "Aditya tamta",
+        "Designation": "Arm-Wrestling Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169268557188714537/ADITYA.png?ex=6554c933&is=65425433&hm=a769c7fdb6003443204fc3bb0232188697d1e8a4716e8e336609332737c24ce8&=&width=380&height=380"
+    },
+    {
+        "Name": "Lokesh Joshi",
+        "Designation": "Arm-Wrestling Co-ordinator",
+        "Image": "https://cdn.discordapp.com/attachments/1162451241872412902/1169268556777668698/LOKESH.png?ex=6554c933&is=65425433&hm=381b105654f6d5d82ceee0eacd0b489dfce5e1e909dcde130c912880f5a4e6d1&"
+    },
+    {
+        "Name": "Daksh Bisht",
+        "Designation": "Football Co-ordinator",
+        "Image": "https://media.discordapp.net/attachments/1162451241872412902/1169268558115651614/DASKSH.png?ex=6554c934&is=65425434&hm=b118bb163ba27ed72ed4e81d1caa84d674c5be0b9f38f09df05bd6e8d090cfbc&=&width=380&height=380"
+    }
+]
