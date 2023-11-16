@@ -9,7 +9,8 @@ const AdminPage = () => {
     session &&
     <main>
       <p className="text-3xl font-bold text-center">Admin Page</p>
-      <p className="text-center font-">Admin Tube</p>
+      <p className="text-center font-semibold">Admin Tube</p>
+      <Link href={'/admin/profile'} className="text-white text-5xl font-bold">Profile</Link>
       <p>Your name: {session?.user.name}</p>
       <p>Your email: {session?.user.email}</p>
       <img src={session?.user.image} />
@@ -17,7 +18,6 @@ const AdminPage = () => {
       <p className="text-white text-5xl">{Date(session.expires)}</p>
       <p className="text-white text-5xl">{ }</p>
     </main>
-
   )
 }
 export default AdminPage;

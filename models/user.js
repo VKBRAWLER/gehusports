@@ -30,11 +30,8 @@ const UserSchema = new Schema({
     type: Array,
     default: [],
   },
-  forgot_password_token: String,
-  forgot_password_token_expires: Date,
-  verify_token: String,
-  verify_token_expires: Date,
-});
+},
+  { versionKey: false });
 
 const User = models.User || model('User', UserSchema);
 
