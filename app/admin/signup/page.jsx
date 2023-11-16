@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import { signIn, getProviders, useSession } from "next-auth/react";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Loading from '@app/loading';
 const SignUpPage = () => {
-  const { data: session } = useSession();
+  const { status } = useSession();
   const [credentials, setCredentials] = useState({ email: '', password: '', confirmpassword: '' });
   const [providers, setProviders] = useState(null);
   const router = useRouter();
@@ -19,7 +20,7 @@ const SignUpPage = () => {
   useEffect(() => {
     setUpProviders();
     updateCredentials(0);
-  }, [session])
+  }, [])
   const signUp = async () => {
     const response = await fetch('/api/users/signup', {
       method: 'POST',
@@ -64,7 +65,13 @@ const SignUpPage = () => {
     event.preventDefault();
     checkForm();
   };
-  if (!session) {
+  if (status === "authenticated") {
+    router.push('/admin');
+    return (
+      <Loading />
+    );
+  }
+  if (status === "unauthenticated") {
     return (
       <main className='flex items-center justify-center'>
         <div className="bg-white p-8 rounded shadow-md w-full md:w-96">
@@ -101,9 +108,8 @@ const SignUpPage = () => {
     )
   }
   else {
-    router.push('/admin');
     return (
-      <div></div>
+      <Loading />
     )
   }
 };
