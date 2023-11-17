@@ -1,4 +1,4 @@
-import Content from './Content';
+import Content from '../components/Content';
 import Link from 'next/link';
 const EnduranceCup = () => {
   return (

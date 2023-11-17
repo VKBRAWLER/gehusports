@@ -1,6 +1,6 @@
 import LateralScroll from '@components/LateralScroll';
 import SportsTypeBox from '@components/SportsTypeBox';
-import EndurenceCup from '@components/EndurenceCup';
+import EndurenceCup from '@pages/EndurenceCup';
 import Faculty from '@components/Faculty';
 const HomePage = () => {
   return (
