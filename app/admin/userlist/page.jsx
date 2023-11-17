@@ -1,5 +1,5 @@
 "use client";
-import Verified from "@pages/Verified";
+import Verified from "@components/Verified";
 import { useEffect, useState } from "react";
 const UserListPage = () => {
   const [userList, setUserList] = useState([]);
