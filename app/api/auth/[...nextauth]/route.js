@@ -25,7 +25,10 @@ const authOptions = {
   callbacks: {
     async session({ session }) {
       const sessionUser = await User.findOne({ email: session.user.email });
-      session.user.id = sessionUser._id.toString();
+      // session.user.id = sessionUser._id.toString();
+      // This code updates the session user object with the data from the user document
+      // retrieved from the database.
+      session.user = { ...session.user, ...sessionUser._doc, password: null };
       return session;
     },
     async signIn({ account, profile, user, credentials }) {
