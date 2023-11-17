@@ -30,6 +30,9 @@ const UserSchema = new Schema({
     type: Array,
     default: [],
   },
+  verified_till: {
+    type: Date,
+  },
 },
   { versionKey: false });
 
