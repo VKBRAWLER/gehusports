@@ -1,5 +1,5 @@
 import AdminWelcome from "@components/AdminWelcome";
-import Auth from "@pages/Auth";
+import { Auth } from "@pages/Auth";
 const AdminPage = () => {
   return (
     <Auth>
