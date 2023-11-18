@@ -1,4 +1,4 @@
-import Timer from './Timer';
+import Timer from '../components/Timer';
 import events from '@data/json/events.json';
 import Link from 'next/link';
 const SportsList = (params) => {

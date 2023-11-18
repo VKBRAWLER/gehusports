@@ -1,4 +1,4 @@
-import Content from "./Content";
+import Content from "../components/Content";
 const Faculty = () => {
   const Quote = `“Sports is not just about winning medals. It is about building character, developing a healthy body and mind, and learning to work in teams. Sports is a way of life that teaches us to face challenges with courage and determination. It is a way of discovering our true potential and realizing our dreams.”`;
   return (

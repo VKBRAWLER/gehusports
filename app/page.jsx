@@ -1,11 +1,11 @@
-import LateralScroll from '@components/LateralScroll';
-import SportsTypeBox from '@components/SportsTypeBox';
-import EndurenceCup from '@pages/EndurenceCup';
-import Faculty from '@components/Faculty';
+import LateralScroll from '@pages/LateralScroll';
+import SportsTypeBox from '@pages/SportsTypeBox';
+import EnduranceCup from '@pages/EnduranceCup';
+import Faculty from '@pages/Faculty';
 const HomePage = () => {
   return (
     <>
-      <EndurenceCup />
+      <EnduranceCup />
       <main className='z-10 relative'>
         <div className="w-full py-10 mt-[calc(60vh-6rem)] bg-white overflow-hidden">
           <SportsTypeBox />
