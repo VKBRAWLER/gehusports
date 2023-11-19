@@ -1,7 +1,7 @@
 "use client";
-import FormBox from '@pages/FormBox';
+import FormBox from '@components/FormBox';
 import React, { useEffect, useState } from 'react';
-import FullScreenVideo from '@pages/FullScreenVideo';
+import FullScreenVideo from '@components/FullScreenVideo';
 import Register from '@data/json/register.json';
 import Content from '@components/Content';
 import NotFound from '@app/not-found';

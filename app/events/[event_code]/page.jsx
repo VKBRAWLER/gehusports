@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import ArticleBox from "@pages/ArticleBox";
+import ArticleBox from "@components/ArticleBox";
 
 const EventsPageParams = () => {
 	const { event_code } = useParams();

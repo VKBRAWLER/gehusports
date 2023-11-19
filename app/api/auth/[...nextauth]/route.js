@@ -14,7 +14,7 @@ const authOptions = {
     }),
     CredentialsProvider({
       type: "credentials",
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         const { email } = credentials;
         await ConnectToDB();
         const user = await User.findOne({ email });

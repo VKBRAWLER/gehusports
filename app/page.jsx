@@ -1,7 +1,7 @@
-import LateralScroll from '@pages/LateralScroll';
-import SportsTypeBox from '@pages/SportsTypeBox';
-import EnduranceCup from '@pages/EnduranceCup';
-import Faculty from '@pages/Faculty';
+import LateralScroll from '@components/LateralScroll';
+import SportsTypeBox from '@components/SportsTypeBox';
+import EnduranceCup from '@components/EnduranceCup';
+import Faculty from '@components/Faculty';
 const HomePage = () => {
   return (
     <>

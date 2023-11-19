@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import FullScreenVideo from '@pages/FullScreenVideo';
+import FullScreenVideo from '@components/FullScreenVideo';
 function RegistrationForm({ params }) {
 	const [collegeName, setCollegeName] = useState('');
 	const [teamName, setTeamName] = useState('');

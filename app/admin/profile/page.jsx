@@ -2,7 +2,7 @@
 import Auth from "@components/Auth";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
-import ProfileDetailsForm from "@pages/ProfileDetailsForm";
+import ProfileDetailsForm from "@components/ProfileDetailsForm";
 
 const ProfilePage = () => {
   const { data: session } = useSession();
