@@ -13,7 +13,7 @@ const Auth = ({ children }) => {
     return (
       <main>
         <h1 className="text-center text-3xl">You must be signed in to access this page</h1>
-        <Link href={'/admin/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
+        <Link href={'/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
       </main>
     );
   }
