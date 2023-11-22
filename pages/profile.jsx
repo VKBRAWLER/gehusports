@@ -17,21 +17,21 @@ const ProfilePage = () => {
           alt="Profile picture"
           layout="fill"
           objectFit="cover"
-          />
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold mt-4">{session?.user.name}</h1>
-          <p className="text-gray-500">{session?.user.email}</p>
-          <p className="text-gray-500">{session?.user.role}</p>
-          <p className="text-gray-500">
-            {session?.user.is_verfied ? "Verified" : "Not verified"}
-          </p>
-        </div>
-        {session?.user.is_verfied ||
-          <ProfileDetailsForm user={session?.user} />}
-      </main>
-    );
-  };
+        />
+      </div>
+      <div>
+        <h1 className="text-2xl font-bold mt-4">{session?.user.name}</h1>
+        <p className="text-gray-500">{session?.user.email}</p>
+        <p className="text-gray-500">{session?.user.role}</p>
+        <p className="text-gray-500">
+          {session?.user.is_verfied ? "Verified" : "Not verified"}
+        </p>
+      </div>
+      {session?.user.is_verfied ||
+        <ProfileDetailsForm user={session?.user} />}
+    </main>
+  );
+};
 
 export default function () {
   return (
