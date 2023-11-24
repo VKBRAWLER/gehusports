@@ -4,6 +4,7 @@ import RoleAuth from '@components/RoleAuth';
 import Verified from '@components/Verified';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Provider from '@components/Provider';
 const AdminEventsPage = () => {
   const [events, setEvents] = useState([]);
   const fetchEvents = async () => {
@@ -45,4 +46,10 @@ const AdminEventsPage = () => {
   )
 }
 
-export default AdminEventsPage;
+export default function () {
+  return (
+    <Provider>
+      <AdminEventsPage />
+    </Provider>
+  )
+};
