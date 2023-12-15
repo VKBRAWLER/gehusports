@@ -4,6 +4,7 @@ import Provider from "@components/Provider";
 import RoleAuth from "@components/RoleAuth";
 import Verified from "@components/Verified";
 import { useEffect, useState } from "react";
+import { CheckBadgeIcon, XCircleIcon } from "@heroicons/react/24/solid";
 const UserListPage = () => {
   const [userList, setUserList] = useState([]);
   const getUsers = async () => {
@@ -26,14 +27,74 @@ const UserListPage = () => {
           <RoleAuth role={['developer', 'teacher', 'organising member']}>
             <main>
               <section className="flex flex-col gap-5 p-5">
-                {userList?.length ?
-                  userList?.map((user) => (
-                    <div key={user._id.toString()} className="w-full bg-white h-32 rounded-2xl flex justify-between items-center p-2"><img src={user.image} alt="" className="rounded-full" /> <p>{user.email}</p><span>Role: {user.role}</span><span>{user.is_verfied ? <>verified</> : <>not verified</>}</span></div>
-                  ))
-                  : <p>No users found</p>
-                }
-              </section>
-            </main>
+              {userList?.length ? (
+          <div class="relative overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="text-xs text-white uppercase bg-black">
+                <tr>
+                  <th scope="col" class="px-6 py-3">
+                    Profile
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    E-mail
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Name
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Role
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Verified
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="glassmorphic-table ">
+                {userList?.map((user) => (
+                  <tr class="border-b-[1px]" key={user._id.toString()}>
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium flex justify-center"
+                    >
+                      {user.email ? (
+                        <img
+                          src={user.image}
+                          alt=""
+                          className="rounded-full h-12"
+                        />
+                      ) : (
+                        "profile not found"
+                      )}
+                    </th>
+
+                    <td class="px-6 py-4 text-center">
+                      {user.email || "e-mail not found"}
+                    </td>
+                    <td class="px-6 py-4 text-center" text-center>
+                      {user.name || "name not found" }
+                    </td>
+                    <td class="px-6 py-4 text-center">organising member</td>
+                    <td>
+                      <span className="flex justify-center">
+                        {user.is_verfied ? (
+                          <CheckBadgeIcon className="h-8 w-8 text-center text-sky-500" />
+                        ) : (
+                          <XCircleIcon className="h-8 text-center w-8 text-red-500" />
+                        )}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <span className="w-full text-center text-4xl font-bold ">
+            No users found :-
+          </span>
+        )}
+      </section>
+    </main>
           </RoleAuth>
         </Verified>
       </Auth>

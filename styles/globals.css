@@ -163,3 +163,10 @@ input[type='radio']:checked:after {
       background: rgba(255, 255, 255, 0.05);
     }
 }
+.glassmorphic-table {
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+    
+  }
