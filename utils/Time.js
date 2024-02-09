@@ -64,3 +64,9 @@ export function TimeString(timeLeft) {
     const TString = days + hours + minutes;
     return TString;
 }
+export function formatDate(date) {
+    if (!date) return "N/A";
+    const newDate = new Date(date);
+    const options = { year: 'numeric', month: 'short', day: '2-digit' };
+    return newDate.toLocaleDateString('en-US', options);
+}

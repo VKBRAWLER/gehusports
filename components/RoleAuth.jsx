@@ -5,7 +5,7 @@ const RoleAuth = ({ children, role }) => {
   const { data: session } = useSession();
   if (role.includes(session?.user.role)) {
   return (
-      <>{children}      </>
+      <>{children}</>
     );
   }
   if (!role.includes(session?.user.role)) {

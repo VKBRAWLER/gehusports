@@ -48,8 +48,8 @@ const authOptions = {
             newUser.name = await profile.name;
           }
         }
-        if (!user.user_code) {
-          user.user_code = user.email.split('@')[0] + process.env.HASH_TOKEN;
+        if (!newUser.user_code) {
+          newUser.user_code = newUser.email.split('@')[0] + process.env.HASH_TOKEN;
         }
         await newUser.save();
         return true
