@@ -28,7 +28,8 @@ const authOptions = {
       // session.user.id = sessionUser._id.toString();
       // This code updates the session user object with the data from the user document
       // retrieved from the database.
-      session.user = { ...session.user, ...sessionUser._doc, password: null };
+      session.user = { ...session.user, ...sessionUser._doc };
+      delete session.user.password;
       return session;
     },
     async signIn({ account, profile, user, credentials }) {

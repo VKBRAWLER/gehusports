@@ -6,7 +6,6 @@ import { NextResponse } from "next/server";
 async function NOTverified(requester_code) {
     if (!requester_code) return true;
     const userExist = await User.findOne({ user_code: requester_code });
-    console.log(userExist);
     if (!userExist) return true;
     if (!userExist.is_verfied) return true;
     if (userExist.role == "developer"||userExist.role == "teacher"||userExist.role == "organising member") return false;

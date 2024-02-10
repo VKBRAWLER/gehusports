@@ -25,7 +25,7 @@ const EventsPage = () => {
 		<main>
 			<section className="flex justify-center flex-wrap">
 				{events.length ?
-					events.map((i) => { return (<EventBox object={i} />) })
+					events.map((i) => { return (<EventBox key={i._id} object={i} />) })
 					: <p className="text-3xl font-bold">No Events Found</p>}
 			</section>
 		</main>
