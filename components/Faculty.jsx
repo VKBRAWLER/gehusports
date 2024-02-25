@@ -7,9 +7,9 @@ const Faculty = () => {
       <section className="flex justify-evenly flex-wrap mx-5 gap-5">
         <div className="max-w-sm sm:w-72 md:w-1/4 overflow-hidden bg-white group"><img className='w-full' src={Content.facimg} alt="" /><div className='lg:relative'><h3 className='text-2xl bg-blue-400 w-full text-center'>Faculty Name 01</h3><p className='m-2 lg:absolute left-1 right-1 -bottom-full lg:opacity-0 group-hover:bottom-3/4 group-hover:opacity-100 duration-700'>``Quote HERE.``</p></div></div>
         <div className="boss group">
-          <img className='w-full' src={Content.dicimg} alt="" />
+          <img className='w-full' src={Content.facimg} alt="" />
           <div className='lg:relative'>
-            <h3 className='text-2xl bg-blue-400 w-full text-center'>Dr. M. C. Lohani</h3>
+            <h3 className='text-2xl bg-blue-400 w-full text-center'>Honarable Director Sir</h3>
             <p className='m-2 lg:absolute left-1 right-1 -bottom-full lg:opacity-0 group-hover:bottom-3/4 group-hover:opacity-100 duration-700 lg:text-white ntexts'>
               {Quote}
             </p>

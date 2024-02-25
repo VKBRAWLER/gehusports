@@ -22,7 +22,7 @@ const ProfilePage = () => {
       },
       body: JSON.stringify(profile)
     });
-    router.push('/admin/profile');
+    router.push('/admin');
   }
   return (
     <main className="flex justify-center p-2 text-center">

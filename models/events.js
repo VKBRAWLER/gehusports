@@ -43,6 +43,11 @@ const EventsSchema = new Schema({
 		type: Date,
 		default: Date.now,
 	},
+	sports_count: {
+		type: Number,
+		default: 0,
+		require: [true, 'sports count should be mentioned'],
+	},
 },
 	{ versionKey: false });
 
