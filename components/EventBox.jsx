@@ -11,7 +11,8 @@ const EventBox = (params) => {
           <p>{formatDate(obj.start_date)} - {formatDate(obj.end_date)}</p>
           <p className="text-base lg:text-lg">Created by: {obj.created_by}</p>
           <p className="text-base lg:text-lg">Created on: {formatDate(obj.created_at)}</p>
-          <p className="text-base lg:text-lg">Last Updated on: {formatDate(obj.created_at)}</p> 
+          <p className="text-base lg:text-lg">Last Updated by: {obj.last_updated_by || "N/A"}</p> 
+          <p className="text-base lg:text-lg">Last Updated on: {formatDate(obj.last_updated_at )}</p> 
           <p className="text-base lg:text-lg">Visibility: {(obj.visible?<>True</>:<>False</>)}</p> 
           <p className="text-base lg:text-lg">{obj.sports_count} sports</p>
         </article>

@@ -39,9 +39,11 @@ const EventsSchema = new Schema({
 		type: String,
 		require: [true, 'Login is required'],
 	},
-	updated_at: {
+	last_updated_at: {
 		type: Date,
-		default: Date.now,
+	},
+	last_updated_by: {
+		type: String,
 	},
 	sports_count: {
 		type: Number,
