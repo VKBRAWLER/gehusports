@@ -1,8 +1,9 @@
 "use client";
+import Loading from "@app/loading";
 import EventBox from "@components/EventBox";
 import { useEffect, useState } from "react";
 const EventsPage = () => {
-	const [events, setEvents] = useState([]);
+	const [events, setEvents] = useState();
 	const fetchEvents = async () => {
 		const response = await fetch('/api/events');
 		const data = await response.json();
@@ -21,6 +22,7 @@ const EventsPage = () => {
 	useEffect(() => {
 		fetchEvents();
 	}, [])
+	if (!events) return <Loading />
 	return (
 		<main>
 			<section className="flex justify-center flex-wrap">

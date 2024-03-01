@@ -10,22 +10,25 @@ import Provider from "@components/Provider";
 import Auth from "@components/Auth";
 import Verified from "@components/Verified";
 import RoleAuth from "@components/RoleAuth";
+import Loading from "@app/loading";
 const AdminsEventsPageParams = () => {
 	const { event_code } = useParams();
 	const { data: session } = useSession();
+	const [loading, setLoading] = useState(true);
 	const [eventData, setEventData] = useState(false);
 	const [sportsList, setSportsList] = useState(null);
 	const [eventDetails, setEventDetails] = useState({ title: '', startDate: '', endDate: '' });
-	const Searchevent_code = async (event_code) => {
+	const SearchEvent_code = async (event_code) => {
 		const response = await fetch(`/api/events/${event_code}`);
 		const data = await response.json();
+		setLoading(false);
 		setEventData(data.data);
-		if (data.exist) fetchSportsList();
+		if (data) fetchSportsList();
 	}
 	const fetchSportsList = async () => {
 		const response = await fetch(`/api/sports/${event_code}`);
-		const data = await response.json();
-		setSportsList(data);
+		const sportsData = await response.json();
+		setSportsList(sportsData);
 	}
 	const DeleteEvent = () => {
 		const DeleteRequest = async () => {
@@ -62,8 +65,9 @@ const AdminsEventsPageParams = () => {
 		if (confirm(`Are you sure you want to make this event ${eventData.visible?"Not Visible":"Visible"}?`)) { VisibleRequest(); }
 	}
 	useEffect(() => {
-		Searchevent_code(event_code);
+		SearchEvent_code(event_code);
 	}, [])
+	if (loading) return <Loading />
 	return (
 		<main>
 			{eventData ?
@@ -89,7 +93,8 @@ const AdminsEventsPageParams = () => {
 						<label htmlFor="endDate" className="text-xl font-bold">End Date:</label>
 						<input type="date" id="endDate" className="border-2 border-gray-300 p-2 rounded" value={eventDetails.endDate} onChange={(e) => setEventDetails({ ...eventDetails, endDate: e.target.value })} /> */}
 					</div>
-					{sportsList && sportsList.length && sportsList.map((i) => {
+					{eventData.sports_count?
+					sportsList.map((i) => {
 						return (
 							<div className='p-8 w-80 h-[29.5rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative' key={i._id}>
 								<img className='w-64 h-[17rem]' src={i.poster_image} alt="Image not found" />
@@ -97,7 +102,9 @@ const AdminsEventsPageParams = () => {
 								<ArticleBox obj={i} />
 							</div>
 						)
-					})}
+					}):
+					<p className="text-3xl font-bold text-center">No Sports Associated with {eventData.title}</p>
+				}
 				</section>
 				: <p className="text-3xl font-bold text-center">Events Not Found</p>}
 		</main>
@@ -109,7 +116,8 @@ export default function () {
     <Provider>
       <Auth>
         <Verified>
-          <RoleAuth role={['developer', 'teacher', 'organising member']}>
+          <RoleAuth role={
+						['developer', 'teacher', 'organising member']}>
             <AdminsEventsPageParams />
           </RoleAuth>
         </Verified>

@@ -5,8 +5,9 @@ import Auth from '@components/Auth';
 import { useState, useEffect } from 'react';
 import Provider from '@components/Provider';
 import EventBox from '@components/EventBox';
+import Loading from '@app/loading';
 const AdminEventsPage = () => {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState();
   const fetchEvents = async () => {
     const response = await fetch('/api/events');
     const data = await response.json();
@@ -24,6 +25,7 @@ const AdminEventsPage = () => {
   useEffect(() => {
     fetchEvents();
   }, [])
+  if (!events) return <Loading />
   return (
     <main>
       <section className="flex justify-center flex-wrap">
