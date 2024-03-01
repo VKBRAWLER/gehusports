@@ -17,7 +17,12 @@ const AdminsEventsPageParams = () => {
 	const [loading, setLoading] = useState(true);
 	const [eventData, setEventData] = useState(false);
 	const [sportsList, setSportsList] = useState(null);
-	const [eventDetails, setEventDetails] = useState({ title: '', startDate: '', endDate: '' });
+  const [EditingMode, setEditingMode] = useState(false);
+	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code });
+	const updateEventDetails = (e) => {
+    if (e) setEventDetails({ ...eventDetails, [e.target.id]: e.target.value });
+		console.log(eventDetails);
+  }
 	const SearchEvent_code = async (event_code) => {
 		const response = await fetch(`/api/events/${event_code}`);
 		const data = await response.json();
@@ -51,7 +56,7 @@ const AdminsEventsPageParams = () => {
 		const VisibleRequest = async () => {
 			const response = await fetch(`/api/events/${event_code}`, {
 				method: 'PUT',
-				body: JSON.stringify({ visible: !eventData.visible, updated_by: session?.user.user_code }),
+				body: JSON.stringify({ visible: !eventData.visible, last_updated_by: session?.user.user_code }),
 			});
 			const data = await response.json();
 			if (data.success) {
@@ -64,6 +69,19 @@ const AdminsEventsPageParams = () => {
 		}
 		if (confirm(`Are you sure you want to make this event ${eventData.visible?"Not Visible":"Visible"}?`)) { VisibleRequest(); }
 	}
+	const saveChanges = async () => {
+		const response = await fetch(`/api/events/${event_code}`, {
+			method: 'PUT',
+			body: JSON.stringify(eventDetails),
+		});
+		const data = await response.json();
+		if (data.success) {
+			window.location.reload();
+		}
+		else {
+			alert(`Error: ${data.message}`);
+		}
+	}
 	useEffect(() => {
 		SearchEvent_code(event_code);
 	}, [])
@@ -72,27 +90,47 @@ const AdminsEventsPageParams = () => {
 		<main>
 			{eventData ?
 				<section className='w-full p-2 flex flex-wrap justify-center gap-4'>
+					{EditingMode?
+					<form action={saveChanges} className="my-5 w-full max-w-[104rem] lg:h-96 rounded-2xl border-4 border-white p-2 lg:flex glassmorphic relative">
+						<img className="w-full lg:w-auto rounded-2xl" src={eventDetails.poster_image === ''? eventData.poster_image: eventDetails.poster_image} alt="image not found" />
+						<article className="w-full p-2 flex flex-col gap-1 lg:gap-5">
+							<div>
+								<label htmlFor="start_date" className="text-xl font-bold mx-5">Start Date:</label>
+								<input type="date" id="start_date" className="border-2 border-gray-300 p-2 rounded" onChange={(e) => { updateEventDetails(e)} }/>
+							</div>
+							<div>
+								<label htmlFor="end_date" className="text-xl font-bold mx-5">End Date:</label>
+								<input type="date" id="end_date" className="border-2 border-gray-300 p-2 rounded" onChange={(e) => { updateEventDetails(e)} }/>
+							</div>
+							<div>
+								<label htmlFor="title" className="text-xl font-bold mx-5">Title:</label>
+								<input type="text" id="title" className="border-2 border-gray-300 p-2 rounded w-full max-w-xl " onChange={(e) => { updateEventDetails(e)} }/>
+							</div>
+							<div>
+								<label htmlFor="poster_image" className="text-xl font-bold mx-5">Image URL:</label>
+								<input type="text" id="poster_image" className="border-2 border-gray-300 p-2 rounded w-full max-w-xl " onChange={(e) => { updateEventDetails(e)} }/>
+							</div>
+							<MdDelete onClick={DeleteEvent} className="w-14 h-12 lg:absolute top-16 right-2 bg-red-300 my-1 lg:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2" />
+							{eventData.visible ? <FaEye onClick={VisibleEvent} className="w-14 h-12 lg:absolute top-2 right-2 bg-white my-1 lg:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2"/> : <FaEyeSlash onClick={VisibleEvent} className="w-14 h-12 lg:absolute top-2 right-2 bg-white my-1 lg:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2"/>}
+							<p className='text-red-600 bg-yellow-50 rounded-2xl pl-2'>Keep the input blank if do not wish to change</p>
+							<button type="submit" className="lg:absolute w-full lg:w-auto bottom-2 right-2 bg-slate-500 my-1 lg:m-0 rounded-xl border-2 p-2">Save Changes</button>
+					</article>
+					</form>:
 					<div className="my-5 w-full max-w-[104rem] md:h-64 lg:h-80 rounded-2xl border-4 border-white p-2 md:flex glassmorphic relative">
-						<img className="w-full md:w-auto rounded-2xl" src={eventData.poster_image} alt="image not found" />
-        		<article className="w-full p-2 text-white">
+					<img className="w-full md:w-auto rounded-2xl" src={eventData.poster_image} alt="image not found" />
+        	<article className="w-full p-2 text-white">
           <h1 className="text-3xl md:text-xl lg:text-3xl font-bold">{eventData.title}</h1>
           <p>{formatDate(eventData.start_date)} - {formatDate(eventData.end_date)}</p>
           <p className="text-base lg:text-lg">Created by: {eventData.created_by}</p>
           <p className="text-base lg:text-lg">Created on: {formatDate(eventData.created_at)}</p>
+          <p className="text-base lg:text-lg">Last Upadated by: {eventData.last_updated_by}</p> 
           <p className="text-base lg:text-lg">Last Upadated on: {formatDate(eventData.last_updated_at)}</p> 
 					<p className="text-base lg:text-lg">Visibility: {(eventData.visible?<>True</>:<>False</>)}</p> 
           <p className="text-base lg:text-lg">{eventData.sports_count} sports</p>
-        </article>
-						<MdDelete onClick={DeleteEvent} className="w-14 h-12 md:absolute top-16 right-2 bg-red-300 my-1 md:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2" />
-						{eventData.visible ? <FaEye onClick={VisibleEvent} className="w-14 h-12 md:absolute top-2 right-2 bg-white my-1 md:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2"/> : <FaEyeSlash onClick={VisibleEvent} className="w-14 h-12 md:absolute top-2 right-2 bg-white my-1 md:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2"/>}
-						<button className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 my-1 md:m-0 rounded-xl border-2 p-2">Edit Event</button>
-						{/* <label htmlFor="title" className="text-xl font-bold">Title:</label>
-						<input type="text" id="title" className="border-2 border-gray-300 p-2 rounded" value={eventDetails.title} onChange={(e) => setEventDetails({ ...eventDetails, title: e.target.value })}/>
-						<label htmlFor="startDate" className="text-xl font-bold">Start Date:</label>
-						<input type="date" id="startDate" className="border-2 border-gray-300 p-2 rounded" value={eventDetails.startDate} onChange={(e) => setEventDetails({ ...eventDetails, startDate: e.target.value })}/>
-						<label htmlFor="endDate" className="text-xl font-bold">End Date:</label>
-						<input type="date" id="endDate" className="border-2 border-gray-300 p-2 rounded" value={eventDetails.endDate} onChange={(e) => setEventDetails({ ...eventDetails, endDate: e.target.value })} /> */}
+        	</article>
+						<button onClick={() => { setEditingMode(true); }} className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 my-1 md:m-0 rounded-xl border-2 p-2">Edit Event</button>
 					</div>
+					}
 					{eventData.sports_count?
 					sportsList.map((i) => {
 						return (
