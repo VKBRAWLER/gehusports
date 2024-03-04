@@ -29,19 +29,8 @@ export async function PUT(NextRequest, { params }) {
     if (!allow) return NextResponse.json({ message: "Unauthorized Request" }, { status: 401 });
     const last_updated_at = new Date();
     last_updated_by = allow;
-    let ReqBody = { title, start_date, end_date, poster_image, visible, last_updated_by, last_updated_at };
-    let newReqBody = {};
-    console.log(ReqBody);
-    for (let key in ReqBody) {
-      if (!ReqBody[key]) continue;
-      if (typeof ReqBody[key] === 'string') {
-        ReqBody[key].trim();
-        if (ReqBody[key] === '') continue;
-      }
-      newReqBody[key] = ReqBody[key];
-    }
-    console.log(newReqBody);
-    const event = await Events.findByIdAndUpdate(params.event_code, newReqBody, {
+    const event = await Events.findByIdAndUpdate(params.event_code, 
+      { title, start_date, end_date, poster_image, visible, last_updated_by, last_updated_at }, {
       new: true,
       runValidators: true,
     });

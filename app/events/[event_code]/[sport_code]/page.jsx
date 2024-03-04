@@ -1,4 +1,4 @@
-const SportsPageParams = () => {
+const SportsPage = () => {
   return (
     <main>
       <p className="text-3xl font-bold text-center">Sports Page</p>
@@ -7,4 +7,4 @@ const SportsPageParams = () => {
   )
 }
 
-export default SportsPageParams;
+export default SportsPage;

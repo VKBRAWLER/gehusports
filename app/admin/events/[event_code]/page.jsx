@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import ArticleBox from "@components/ArticleBox";
 import { formatDate } from "@utils/Time";
 import { MdDelete } from "react-icons/md";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -11,6 +10,7 @@ import Auth from "@components/Auth";
 import Verified from "@components/Verified";
 import RoleAuth from "@components/RoleAuth";
 import Loading from "@app/loading";
+import Link from "next/link";
 const AdminsEventsPageParams = () => {
 	const { event_code } = useParams();
 	const { data: session } = useSession();
@@ -70,6 +70,20 @@ const AdminsEventsPageParams = () => {
 		if (confirm(`Are you sure you want to make this event ${eventData.visible?"Not Visible":"Visible"}?`)) { VisibleRequest(); }
 	}
 	const saveChanges = async () => {
+		let newReqBody = {};
+    for (let key in eventDetails) {
+      if (!eventDetails[key]) continue;
+      if (typeof eventDetails[key] === 'string') {
+        eventDetails[key] = eventDetails[key].trim();
+        if (eventDetails[key] === '') continue;
+      }
+      newReqBody[key] = eventDetails[key];
+    }
+		console.log(newReqBody);
+		if (Object.keys(newReqBody).length <= 1) {
+			alert(`No changes made`);
+			return;
+		}
 		const response = await fetch(`/api/events/${event_code}`, {
 			method: 'PUT',
 			body: JSON.stringify(eventDetails),
@@ -132,12 +146,17 @@ const AdminsEventsPageParams = () => {
 					</div>
 					}
 					{eventData.sports_count?
-					sportsList.map((i) => {
+					sportsList?.map((i) => {
 						return (
-							<div className='p-8 w-80 h-[29.5rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative' key={i._id}>
-								<img className='w-64 h-[17rem]' src={i.poster_image} alt="Image not found" />
+							<div className='p-8 w-80 h-[33rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative' key={i._id}>
+								<img className='w-64 h-[17rem]' src={"https://media.discordapp.net/attachments/1162451241872412901/1213367132373516328/WhatsApp_Image_2023-10-31_at_22.56.45_5a95a456.jpg?ex=65f53733&is=65e2c233&hm=ef05d2ef0dfe449198cd695bab88e2ad4eef6c233ad8ff50f36c629f0b6a57df&=&format=webp&width=614&height=671"} alt="Image not found" />
 								<h1 className='text-center font-bold text-3xl w-full h-[4.5rem] my-1'>{i.title} Tournament</h1>
-								<ArticleBox obj={i} />
+								<article className="h-[4.5rem]">
+									<h2 className='text-xl font-bold mr-2'>Start Date: {formatDate(i.start_date)}</h2>
+									<h2 className='text-xl font-bold mr-2'>End Date: {formatDate(i.end_date)}</h2>
+									<h2 className="text-xl font-bold mr-2">Regestration: {i.register ? "Open": "Closed"}</h2>
+									<Link href={`/admin/events/${event_code}/${i._id}`} className="absolute bottom-2 right-2 bg-blue-400 p-2 rounded-xl">Edit Sport</Link>
+								</article>
 							</div>
 						)
 					}):
