@@ -23,12 +23,12 @@ export async function GET() {
 export async function PUT(NextRequest) {
     try {
       await ConnectToDB();
-      let { title, start_date, end_date, poster_image, visible, last_updated_by, event_code } = await NextRequest.json();
+      let { title, start_date, end_date, poster_image, visible, last_updated_by, _id } = await NextRequest.json();
       const allow = await Grade1Auth(last_updated_by);
       if (!allow) return NextResponse.json({ message: "Unauthorized Request" }, { status: 401 });
       const last_updated_at = new Date();
       last_updated_by = allow.name;
-      const event = await Events.findByIdAndUpdate( event_code, 
+      const event = await Events.findByIdAndUpdate( _id, 
         { title, start_date, end_date, poster_image, visible, last_updated_by, last_updated_at }, {
         new: true,
         runValidators: true,

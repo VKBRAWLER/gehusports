@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { formatDate } from "@utils/Time";
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdOutlineAdd } from "react-icons/md";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useSession } from "next-auth/react";
 import Provider from "@components/Provider";
@@ -18,7 +18,7 @@ const AdminsEventsPageParams = () => {
 	const [eventData, setEventData] = useState(false);
 	const [sportsList, setSportsList] = useState(null);
   const [EditingMode, setEditingMode] = useState(false);
-	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code, event_code: event_code });
+	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code, _id: event_code });
 	const updateEventDetails = (e) => {
     if (e) setEventDetails({ ...eventDetails, [e.target.id]: e.target.value });
 		console.log(eventDetails);
@@ -56,7 +56,7 @@ const AdminsEventsPageParams = () => {
 		const VisibleRequest = async () => {
 			const response = await fetch(`/api/events`, {
 				method: 'PUT',
-				body: JSON.stringify({ visible: !eventData.visible, last_updated_by: session?.user.user_code, event_code }),
+				body: JSON.stringify({ visible: !eventData.visible, last_updated_by: session?.user.user_code, _id: event_code }),
 			});
 			const data = await response.json();
 			if (data.success) {
@@ -79,7 +79,6 @@ const AdminsEventsPageParams = () => {
       }
       newReqBody[key] = eventDetails[key];
     }
-		console.log(newReqBody);
 		if (Object.keys(newReqBody).length <= 1) {
 			alert(`No changes made`);
 			return;
@@ -142,6 +141,7 @@ const AdminsEventsPageParams = () => {
 							<p className="text-base lg:text-lg">Visibility: {(eventData.visible?<>True</>:<>False</>)}</p> 
           		<p className="text-base lg:text-lg">{eventData.sports_count.length} sports</p>
         		</article>
+						<Link href={`/admin/events/${event_code}/create`} className="md:absolute w-full md:w-auto top-2 right-2 bg-green-500 my-1 md:m-0 rounded-xl border-2 p-1"><MdOutlineAdd className="w-8 h-8" /></Link>
 						<button onClick={() => { setEditingMode(true); }} className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 my-1 md:m-0 rounded-xl border-2 p-2">Edit Event</button>
 					</div>
 					}
@@ -149,7 +149,7 @@ const AdminsEventsPageParams = () => {
 					sportsList?.map((i) => {
 						return (
 							<div className='p-8 w-80 h-[33rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative' key={i._id}>
-								<img className='w-64 h-[17rem]' src={"https://media.discordapp.net/attachments/1162451241872412901/1213367132373516328/WhatsApp_Image_2023-10-31_at_22.56.45_5a95a456.jpg?ex=65f53733&is=65e2c233&hm=ef05d2ef0dfe449198cd695bab88e2ad4eef6c233ad8ff50f36c629f0b6a57df&=&format=webp&width=614&height=671"} alt="Image not found" />
+								<img className='w-64 h-[17rem]' src={i.poster_image} alt="Image not found" />
 								<h1 className='text-center font-bold text-3xl w-full h-[4.5rem] my-1'>{i.title} Tournament</h1>
 								<article className="h-[4.5rem]">
 									<h2 className='text-xl font-bold mr-2'>Start Date: {formatDate(i.start_date)}</h2>

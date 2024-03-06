@@ -60,3 +60,21 @@ export async function DELETE(request) {
       return NextResponse.json({ message: error.message, success: false }, { status: 500 });
     }
   }
+
+export async function PUT(request) {
+  try {
+    let { _id, title, start_date, end_date, poster_image, last_updated_by, register } = await request.json();
+    await ConnectToDB();
+    const allow = await Grade3Auth(last_updated_by);
+    if (!allow) return NextResponse.json({ message: "Unauthorized Request", success: false }, { status: 401 });
+    const last_updated_at = new Date();
+    last_updated_by = allow.name;
+    const sport = await Sports.findByIdAndUpdate( _id, { title, start_date, end_date, poster_image, last_updated_at, last_updated_by, register }, {
+        new: true,
+        runValidators: true,
+      });
+    return NextResponse.json({ message: "Sport updated successfully", success: true }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: error.message, success: false }, { status: 500 });
+  }
+}
