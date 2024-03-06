@@ -23,10 +23,6 @@ const EventsSchema = new Schema({
 		type: String,
 		default: null,
 	},
-	bg_image: {
-		type: String,
-		default: null,
-	},
 	visible: {
 		type: Boolean,
 		default: false,
@@ -46,8 +42,8 @@ const EventsSchema = new Schema({
 		type: String,
 	},
 	sports_count: {
-		type: Number,
-		default: 0,
+		type: Array,
+		default: [],
 		require: [true, 'sports count should be mentioned'],
 	},
 },

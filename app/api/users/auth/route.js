@@ -10,7 +10,10 @@ export async function Grade1Auth(requester_code) {
       ) return user;
   else return false;
 }
-export async function verifiedUser(requester_code) {
+export async function Grade3Auth(requester_code) {
+  return await verifiedUser(requester_code);
+}
+async function verifiedUser(requester_code) {
   if (!requester_code) return false; // if requester_code is not provided
   const userExist = await User.findOne({ user_code: requester_code }); // find user by requester_code
   if (!userExist) return false; // if user does not exist

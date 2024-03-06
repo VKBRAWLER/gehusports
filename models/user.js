@@ -31,8 +31,11 @@ const UserSchema = new Schema({
     default: false,
   },
   parameters: {
-    type: Array,
-    default: [],
+    type: Object,
+    default: {
+      sport: [],
+      event: [],
+    },
   },
   verified_till: {
     type: Date,

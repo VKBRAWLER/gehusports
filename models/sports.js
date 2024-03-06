@@ -26,6 +26,20 @@ const SportsSchema = new Schema({
 		type: String,
 		default: null,
 	},
+	created_at: {
+		type: Date,
+		default: Date.now,
+	},
+	created_by: {
+		type: String,
+		require: [true, 'Login is required'],
+	},
+	last_updated_at: {
+		type: Date,
+	},
+	last_updated_by: {
+		type: String,
+	},
 	register: {
 		type: Boolean,
 		default: false,
