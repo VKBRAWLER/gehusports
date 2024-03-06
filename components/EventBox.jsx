@@ -14,7 +14,7 @@ const EventBox = (params) => {
           <p className="text-base lg:text-lg">Last Updated by: {obj.last_updated_by || "N/A"}</p> 
           <p className="text-base lg:text-lg">Last Updated on: {formatDate(obj.last_updated_at )}</p> 
           <p className="text-base lg:text-lg">Visibility: {(obj.visible?<>True</>:<>False</>)}</p> 
-          <p className="text-base lg:text-lg">{obj.sports_count} sports</p>
+          <p className="text-base lg:text-lg">{obj.sports_count.length} sports</p>
         </article>
         <button className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 my-1 md:m-0 rounded-xl border-2 p-2">Edit Event</button>
       </Link>
@@ -27,7 +27,7 @@ const EventBox = (params) => {
         <article className="w-full p-2 text-white">
           <h1 className="text-3xl font-bold">{obj.title}</h1>
           <p>{formatDate(obj.start_date)} - {formatDate(obj.end_date)}</p>
-          <p className="text-lg">{obj.sports_count} sports</p>
+          <p className="text-lg">{obj.sports_count.length} sports</p>
         </article>
         <button className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 rounded-xl border-2 p-2 lg:hover:text-lg">Browse Event</button>
       </Link>

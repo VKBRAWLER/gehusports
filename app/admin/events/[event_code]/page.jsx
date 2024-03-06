@@ -18,7 +18,7 @@ const AdminsEventsPageParams = () => {
 	const [eventData, setEventData] = useState(false);
 	const [sportsList, setSportsList] = useState(null);
   const [EditingMode, setEditingMode] = useState(false);
-	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code });
+	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code, event_code: event_code });
 	const updateEventDetails = (e) => {
     if (e) setEventDetails({ ...eventDetails, [e.target.id]: e.target.value });
 		console.log(eventDetails);
@@ -28,7 +28,7 @@ const AdminsEventsPageParams = () => {
 		const data = await response.json();
 		setLoading(false);
 		setEventData(data.data);
-		if (data) fetchSportsList();
+		if (data.data) fetchSportsList();
 	}
 	const fetchSportsList = async () => {
 		const response = await fetch(`/api/sports/${event_code}`);
@@ -54,9 +54,9 @@ const AdminsEventsPageParams = () => {
 	}
 	const VisibleEvent = () => {
 		const VisibleRequest = async () => {
-			const response = await fetch(`/api/events/${event_code}`, {
+			const response = await fetch(`/api/events`, {
 				method: 'PUT',
-				body: JSON.stringify({ visible: !eventData.visible, last_updated_by: session?.user.user_code }),
+				body: JSON.stringify({ visible: !eventData.visible, last_updated_by: session?.user.user_code, event_code }),
 			});
 			const data = await response.json();
 			if (data.success) {
@@ -84,7 +84,7 @@ const AdminsEventsPageParams = () => {
 			alert(`No changes made`);
 			return;
 		}
-		const response = await fetch(`/api/events/${event_code}`, {
+		const response = await fetch(`/api/events`, {
 			method: 'PUT',
 			body: JSON.stringify(eventDetails),
 		});
@@ -131,21 +131,21 @@ const AdminsEventsPageParams = () => {
 					</article>
 					</form>:
 					<div className="my-5 w-full max-w-[104rem] md:h-64 lg:h-80 rounded-2xl border-4 border-white p-2 md:flex glassmorphic relative">
-					<img className="w-full md:w-auto rounded-2xl" src={eventData.poster_image} alt="image not found" />
-        	<article className="w-full p-2 text-white">
-          <h1 className="text-3xl md:text-xl lg:text-3xl font-bold">{eventData.title}</h1>
-          <p>{formatDate(eventData.start_date)} - {formatDate(eventData.end_date)}</p>
-          <p className="text-base lg:text-lg">Created by: {eventData.created_by}</p>
-          <p className="text-base lg:text-lg">Created on: {formatDate(eventData.created_at)}</p>
-          <p className="text-base lg:text-lg">Last Upadated by: {eventData.last_updated_by}</p> 
-          <p className="text-base lg:text-lg">Last Upadated on: {formatDate(eventData.last_updated_at)}</p> 
-					<p className="text-base lg:text-lg">Visibility: {(eventData.visible?<>True</>:<>False</>)}</p> 
-          <p className="text-base lg:text-lg">{eventData.sports_count} sports</p>
-        	</article>
+						<img className="w-full md:w-auto rounded-2xl" src={eventData.poster_image} alt="image not found" />
+        		<article className="w-full p-2 text-white">
+          		<h1 className="text-3xl md:text-xl lg:text-3xl font-bold">{eventData.title}</h1>
+          		<p>{formatDate(eventData.start_date)} - {formatDate(eventData.end_date)}</p>
+          		<p className="text-base lg:text-lg">Created by: {eventData.created_by}</p>
+          		<p className="text-base lg:text-lg">Created on: {formatDate(eventData.created_at)}</p>
+          		<p className="text-base lg:text-lg">Last Upadated by: {eventData.last_updated_by}</p> 
+          		<p className="text-base lg:text-lg">Last Upadated on: {formatDate(eventData.last_updated_at)}</p> 
+							<p className="text-base lg:text-lg">Visibility: {(eventData.visible?<>True</>:<>False</>)}</p> 
+          		<p className="text-base lg:text-lg">{eventData.sports_count.length} sports</p>
+        		</article>
 						<button onClick={() => { setEditingMode(true); }} className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 my-1 md:m-0 rounded-xl border-2 p-2">Edit Event</button>
 					</div>
 					}
-					{eventData.sports_count?
+					{eventData.sports_count.length?
 					sportsList?.map((i) => {
 						return (
 							<div className='p-8 w-80 h-[33rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative' key={i._id}>
