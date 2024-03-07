@@ -12,14 +12,14 @@ const AdminEventsPage = () => {
     const response = await fetch('/api/events');
     const data = await response.json();
     const sortedEvents = data.sort((a, b) => {
-			if (a.start_date === null) {
-				return -1; // null stays first
-			} else if (b.start_date === null) {
-				return 1; // null stays first
-			} else {
-				return new Date(b.start_date) - new Date(a.start_date); // Latest events in decreasing order
-			}
-		});
+      if (a.start_date === null) {
+        return -1; // null stays first
+      } else if (b.start_date === null) {
+        return 1; // null stays first
+      } else {
+        return new Date(b.start_date) - new Date(a.start_date); // Latest events in decreasing order
+      }
+    });
     setEvents(sortedEvents);
   }
   useEffect(() => {
@@ -30,7 +30,7 @@ const AdminEventsPage = () => {
     <main>
       <section className="flex justify-center flex-wrap">
         {events.length ?
-          events.map((i) => { return( <EventBox object={i} key={i._id} userType={'admin'} /> ) }
+          events.map((i) => { return (<EventBox object={i} key={i._id} userType={'admin'} />) }
           )
           : <p className="text-3xl font-bold">No Events Found</p>}
       </section>

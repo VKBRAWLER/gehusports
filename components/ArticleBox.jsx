@@ -7,7 +7,6 @@ const ArticleBox = (j) => {
 	const [span, setspan] = useState("?? / ?? / ????");
 	const [btn, setbtn] = useState(false);
 	const [btn_text, setbtn_text] = useState("Registration");
-	const [btn_link, setbtn_link] = useState(`/events/${j.event_code}/${j._id}`);
 	const upadateArticles = (j) => {
 		if (j.start_date) {
 			const Sdate = new Date(j.start_date);
@@ -52,7 +51,7 @@ const ArticleBox = (j) => {
 			{/* <span className="text-lg font-semibold">3d 2hr 23min</span> */}
 			{/* <span className="text-lg font-semibold">?? / ??? / ????</span> */}
 			<span className="text-lg font-semibold">{span}</span>
-			{btn && <Link href={btn_link} className="absolute bottom-2 right-2 bg-blue-400 p-2 rounded-xl">{btn_text}</Link>}
+			{btn && <Link href={'/'} className="absolute bottom-2 right-2 bg-blue-400 p-2 rounded-xl">{btn_text}</Link>}
 		</article>
 	)
 }

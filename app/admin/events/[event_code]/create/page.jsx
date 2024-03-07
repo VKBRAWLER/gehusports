@@ -6,19 +6,19 @@ import Auth from "@components/Auth";
 import Verified from "@components/Verified";
 import RoleAuth from "@components/RoleAuth";
 import Loading from "@app/loading";
-import { useSession } from "next-auth/react";        
-  const CreateSportsPage = () => {
+import { useSession } from "next-auth/react";
+const CreateSportsPage = () => {
   const { event_code } = useParams();
   const { data: session } = useSession();
   const [loading, setLoading] = useState(true);
   const [eventStatus, setEventStatus] = useState();
-  const [sportDetails, setSportDetails] = useState({event_code: event_code, created_by: session?.user.user_code});
+  const [sportDetails, setSportDetails] = useState({ event_code: event_code, created_by: session?.user.user_code });
   const SearchEvent_code = async () => {
     const response = await fetch(`/api/events/${event_code}`);
     const data = await response.json();
     setLoading(false);
     setEventStatus(data.data);
-    }
+  }
   const createSport = async () => {
     const response = await fetch('/api/sports', {
       method: "POST",
@@ -65,7 +65,7 @@ import { useSession } from "next-auth/react";
           <label htmlFor="end_date" className="text-xl font-bold mx-5">End Date:</label>
           <input type="date" id="end_date" className="border-2 border-gray-300 p-2 rounded" onChange={(e) => { updateSportDetails(e) }} />
         </div>
-  			<button type="submit" className="lg:absolute w-full lg:w-auto bottom-2 right-2 bg-slate-500 lg:m-0 rounded-xl border-2 p-2">Create</button>
+        <button type="submit" className="lg:absolute w-full lg:w-auto bottom-2 right-2 bg-slate-500 lg:m-0 rounded-xl border-2 p-2">Create</button>
       </form>
     </main>
   )
@@ -76,7 +76,7 @@ export default function () {
       <Auth>
         <Verified>
           <RoleAuth role={
-						['developer', 'teacher', 'organising member']}>
+            ['developer', 'teacher', 'organising member']}>
             <CreateSportsPage />
           </RoleAuth>
         </Verified>

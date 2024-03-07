@@ -9,7 +9,7 @@ import Loading from "@app/loading";
 import { formatDate } from "@utils/Time";
 import { MdDelete } from "react-icons/md";
 import { useSession } from "next-auth/react";
-const AdminsSportsPage = () => {            
+const AdminsSportsPage = () => {
   const { event_code, sport_code } = useParams();
   const { data: session } = useSession();
   const [sport, setSport] = useState(null);
@@ -48,13 +48,13 @@ const AdminsSportsPage = () => {
       }
     }
     if (confirm('Are you sure you want to change the registration status?')) { EnableRequest(); }
-  } 
+  }
   const DeleteEvent = () => {
     const DeleteRequest = async () => {
       const response = await fetch(`/api/sports`, {
         method: 'DELETE',
         body: JSON.stringify({ _id: sport_code, deleted_by: session?.user.user_code }),
-        });
+      });
       const data = await response.json();
       if (data.success) {
         alert('Event Deleted');
@@ -76,10 +76,10 @@ const AdminsSportsPage = () => {
       }
       newReqBody[key] = sportDetails[key];
     }
-		if (Object.keys(newReqBody).length <= 3) {
-			alert(`No changes made`);
-			return;
-		}
+    if (Object.keys(newReqBody).length <= 3) {
+      alert(`No changes made`);
+      return;
+    }
     const response = await fetch(`/api/sports`, {
       method: 'PUT',
       body: JSON.stringify(newReqBody),
@@ -127,9 +127,9 @@ const AdminsSportsPage = () => {
           <label htmlFor="poster_image" className="text-xl font-bold mx-5">Image URL:</label>
           <input type="text" id="poster_image" className="border-2 border-gray-300 p-2 rounded w-full max-w-xl " onChange={(e) => { updateSportDetails(e) }} />
         </div>
-				<button type="button" onClick={EnableRegister} className="lg:absolute w-full lg:w-auto bottom-2 left-2 bg-green-500 my-1 lg:m-0 rounded-xl border-2 p-2">{sport.register? "Close": "Open"} registration</button>
-				<MdDelete onClick={DeleteEvent} className="w-14 h-12 absolute top-2 right-2 bg-red-300  lg:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2" />
-				<button type="submit" className="lg:absolute w-full lg:w-auto bottom-2 right-2 bg-slate-500 lg:m-0 rounded-xl border-2 p-2">Save Changes</button>
+        <button type="button" onClick={EnableRegister} className="lg:absolute w-full lg:w-auto bottom-2 left-2 bg-green-500 my-1 lg:m-0 rounded-xl border-2 p-2">{sport.register ? "Close" : "Open"} registration</button>
+        <MdDelete onClick={DeleteEvent} className="w-14 h-12 absolute top-2 right-2 bg-red-300  lg:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2" />
+        <button type="submit" className="lg:absolute w-full lg:w-auto bottom-2 right-2 bg-slate-500 lg:m-0 rounded-xl border-2 p-2">Save Changes</button>
       </form>
     </main>
   )

@@ -15,7 +15,7 @@ const AdminPage = () => {
         <article className="w-full p-10 flex flex-col gap-2 text-white">
           <p className="lg:text-5xl text-3xl">{session?.user.name}</p>
           <p className="lg:text-3xl text-xl md:ml-4">{session?.user.role}</p>
-          <p className="lg:text-3xl text-xl md:ml-4">{( session?.user.is_verfied)? <span className="text-green-600">Verified</span>: <span className="text-red-600">Not Verified</span> }</p>
+          <p className="lg:text-3xl text-xl md:ml-4">{(session?.user.is_verfied) ? <span className="text-green-600">Verified</span> : <span className="text-red-600">Not Verified</span>}</p>
           <div className="flex justify-evenly mt-5 flex-wrap gap-6">
             <Link href={'/admin/userlist'} className="bg-blue-500 p-3 rounded-3xl lg:w-32 w-28 text-center">UserList</Link>
             <Link href={'/admin/events'} className="bg-blue-500 p-3 rounded-3xl lg:w-32 w-28 text-center">EventList</Link>
@@ -31,8 +31,8 @@ export default function () {
   return (
     <Provider>
       <Auth>
-      <AdminPage />
-    </Auth>
+        <AdminPage />
+      </Auth>
     </Provider>
   )
 }
