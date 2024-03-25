@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import Provider from '@components/Provider';
 import EventBox from '@components/EventBox';
 import Loading from '@app/loading';
+import { MdOutlineAdd } from 'react-icons/md';
+import Link from 'next/link';
 const AdminEventsPage = () => {
   const [events, setEvents] = useState();
   const fetchEvents = async () => {
@@ -33,6 +35,10 @@ const AdminEventsPage = () => {
           events.map((i) => { return (<EventBox object={i} key={i._id} userType={'admin'} />) }
           )
           : <p className="text-3xl font-bold">No Events Found</p>}
+      </section>
+      <section className="flex justify-center flex-wrap mt-4">
+      <Link href={`/admin/events/create`} className="bg-green-500 my-1 md:m-0 rounded-xl border-2 py-1 px-3"><MdOutlineAdd className="w-10 h-10" /></Link>
+
       </section>
     </main>
   )

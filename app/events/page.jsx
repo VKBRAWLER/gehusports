@@ -7,15 +7,17 @@ const EventsPage = () => {
 	const fetchEvents = async () => {
 		const response = await fetch('/api/events');
 		const data = await response.json();
-		const sortedEvents = data.sort((a, b) => {
-			if (a.start_date === null) {
-				return -1; // null stays first
-			} else if (b.start_date === null) {
-				return 1; // null stays first
-			} else {
-				return new Date(b.start_date) - new Date(a.start_date); // Latest events in decreasing order
-			}
-		});
+		const sortedEvents = data
+			.filter((event) => event.register !== false)
+			.sort((a, b) => {
+				if (a.start_date === null) {
+					return -1; // null stays first
+				} else if (b.start_date === null) {
+					return 1; // null stays first
+				} else {
+					return new Date(b.start_date) - new Date(a.start_date); // Latest events in decreasing order
+				}
+			});
 		setEvents(sortedEvents);
 	}
 
