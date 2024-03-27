@@ -11,9 +11,11 @@ const Auth = ({ children }) => {
   }
   if (status === "unauthenticated") {
     return (
-      <main>
+      <main className="flex justify-center items-center">
+        <div className="glassmorphic p-4 flex justify-center flex-col items-center gap-2">
         <h1 className="text-center text-3xl">You must be signed in to access this page</h1>
-        <Link href={'/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>
+        <Link href={'/signin'} className="text-center text-3xl bg-blue-300 p-3 rounded-xl">Sign In</Link>  
+        </div>  
       </main>
     );
   }

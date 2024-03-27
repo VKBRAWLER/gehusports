@@ -44,6 +44,10 @@ const SportsSchema = new Schema({
 		type: Boolean,
 		default: false,
 	},
+	register_link: {
+		type: String,
+		default: null,
+	},
 	status: {
 		type: Array,
 		default: [],

@@ -63,13 +63,13 @@ export async function DELETE(request) {
 
 export async function PUT(request) {
   try {
-    let { _id, title, start_date, end_date, poster_image, last_updated_by, register } = await request.json();
+    let { _id, title, start_date, end_date, poster_image, last_updated_by, register, register_link } = await request.json();
     await ConnectToDB();
     const allow = await Grade3Auth(last_updated_by);
     if (!allow) return NextResponse.json({ message: "Unauthorized Request", success: false }, { status: 401 });
     const last_updated_at = new Date();
     last_updated_by = allow.name;
-    const sport = await Sports.findByIdAndUpdate( _id, { title, start_date, end_date, poster_image, last_updated_at, last_updated_by, register }, {
+    const sport = await Sports.findByIdAndUpdate( _id, { title, start_date, end_date, poster_image, last_updated_at, last_updated_by, register, register_link }, {
         new: true,
         runValidators: true,
       });

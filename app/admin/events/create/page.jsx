@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import { useParams } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Provider from '@components/Provider';
 import Auth from '@components/Auth';

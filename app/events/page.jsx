@@ -8,7 +8,7 @@ const EventsPage = () => {
 		const response = await fetch('/api/events');
 		const data = await response.json();
 		const sortedEvents = data
-			.filter((event) => event.register !== false)
+			.filter((event) => event.visible === true)
 			.sort((a, b) => {
 				if (a.start_date === null) {
 					return -1; // null stays first
@@ -19,6 +19,7 @@ const EventsPage = () => {
 				}
 			});
 		setEvents(sortedEvents);
+		console.log(sortedEvents);
 	}
 
 	useEffect(() => {

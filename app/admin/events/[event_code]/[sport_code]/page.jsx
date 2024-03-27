@@ -18,7 +18,7 @@ const AdminsSportsPage = () => {
   const [sportDetails, setSportDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code, event_code: event_code, _id: sport_code });
   const updateSportDetails = (e) => {
     setSportDetails({ ...sportDetails, [e.target.id]: e.target.value });
-    console.log(sportDetails);
+    // console.log(sportDetails);
   }
   const SearchEvent_code = async () => {
     const response = await fetch(`/api/events/${event_code}`);
@@ -102,7 +102,7 @@ const AdminsSportsPage = () => {
   return (
     <main className="flex p-2 justify-center gap-2 flex-wrap">
       <section className='p-8 w-80 h-[31rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative'>
-        <img className='w-64 h-[17rem]' src={sport.poster_image} alt="Image not found" />
+        <img className='w-64 h-[17rem]' src={sportDetails.poster_image ===''? sport.poster_image: sportDetails.poster_image} alt="Image not found" />
         <h1 className='text-center font-bold text-3xl w-full h-[4.5rem] my-1'>{sport.title} Tournament</h1>
         <article className="h-[4.5rem]">
           <h2 className='text-xl font-bold mr-2'>Start Date: {formatDate(sport.start_date)}</h2>
@@ -110,7 +110,7 @@ const AdminsSportsPage = () => {
           <h2 className="text-xl font-bold mr-2">Regestration: {sport.register ? "Open" : "Closed"}</h2>
         </article>
       </section>
-      <form action={saveChanges} className='p-8 flex-grow h-[31rem] max-w-[60rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative flex flex-col gap-6'>
+      <form action={saveChanges} className='h-[38rem] p-8 flex-grow md:h-[31rem] max-w-[60rem] rounded-2xl bg-white bg-opacity-70 lg:hover:bg-opacity-100 border-4 border-black relative flex flex-col gap-6'>
         <div>
           <label htmlFor="start_date" className="text-xl font-bold mx-5">Start Date:</label>
           <input type="date" id="start_date" className="border-2 border-gray-300 p-2 rounded" onChange={(e) => { updateSportDetails(e) }} />
@@ -127,9 +127,13 @@ const AdminsSportsPage = () => {
           <label htmlFor="poster_image" className="text-xl font-bold mx-5">Image URL:</label>
           <input type="text" id="poster_image" className="border-2 border-gray-300 p-2 rounded w-full max-w-xl " onChange={(e) => { updateSportDetails(e) }} />
         </div>
-        <button type="button" onClick={EnableRegister} className="lg:absolute w-full lg:w-auto bottom-2 left-2 bg-green-500 my-1 lg:m-0 rounded-xl border-2 p-2">{sport.register ? "Close" : "Open"} registration</button>
+        <div>
+          <label htmlFor="register_link" className="text-xl font-bold mx-5">Register Link:</label>
+          <input type="text" id="register_link" className="border-2 border-gray-300 p-2 rounded w-full max-w-xl " onChange={(e) => { updateSportDetails(e) }} />
+        </div>
+        <button type="button" onClick={EnableRegister} className="md:absolute w-full md:w-auto bottom-2 left-2 bg-green-500 my-1 md:m-0 rounded-xl border-2 p-2">{sport.register ? "Close" : "Open"} registration</button>
         <MdDelete onClick={DeleteEvent} className="w-14 h-12 absolute top-2 right-2 bg-red-300  lg:m-0 rounded-lg border-2 p-1 cursor-pointer inline mx-2" />
-        <button type="submit" className="lg:absolute w-full lg:w-auto bottom-2 right-2 bg-slate-500 lg:m-0 rounded-xl border-2 p-2">Save Changes</button>
+        <button type="submit" className="md:absolute w-full md:w-auto bottom-2 right-2 bg-slate-500 md:m-0 rounded-xl border-2 p-2">Save Changes</button>
       </form>
     </main>
   )

@@ -21,6 +21,7 @@ const UserSchema = new Schema({
   },
   role: {
     type: String,
+    default: 'user',
   },
   created_at: {
     type: Date,

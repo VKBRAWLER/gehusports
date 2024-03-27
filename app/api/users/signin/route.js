@@ -1,6 +1,6 @@
 import { ConnectToDB } from "@utils/database";
 import User from "@models/user";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 
 ConnectToDB();
@@ -9,8 +9,8 @@ export async function POST(NextRequest) {
   try {
     const reqBody = await NextRequest.json();
     const { email, password } = reqBody;
-    console.log(reqBody);
     const userExist = await User.findOne({ email });
+    console.log(userExist);
     if (!userExist) {
       return NextResponse.json({ message: 'User does not Exist', success: false }, { status: 400 });
     }

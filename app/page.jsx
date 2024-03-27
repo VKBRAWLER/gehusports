@@ -1,5 +1,3 @@
-import LateralScroll from '@components/LateralScroll';
-import SportsTypeBox from '@components/SportsTypeBox';
 import EnduranceCup from '@components/EnduranceCup';
 import Faculty from '@components/Faculty';
 import Director from '@components/Director';
