@@ -1,9 +1,8 @@
-import Content from '@components/Content';
 import Link from 'next/link';
 const EnduranceCupPage = () => {
   return (
     <div className='absolute z-0 top-0 right-0 left-0 h-[60vh] flex flex-wrap justify-center'>
-      <video className='object-cover w-full h-full' src={Content.DroneBG} autoPlay muted loop />
+      <video className='object-cover w-full h-full' src={"./video/drone.mp4"} autoPlay muted loop />
       {/* <span className='w-full h-5 bg-white absolute bottom-0'></span> */}
       <span className='tri-left'></span>
       <span className='tri-right'></span>
