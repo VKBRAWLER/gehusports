@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 const FormBox = (params) => {
   if (params.parameter === 'Contact Number') {
     return <FormPhone parameter={params.parameter} name={params.name} colortheme={params.colortheme} />

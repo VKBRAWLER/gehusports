@@ -43,7 +43,7 @@ main {
 }
 
 .boss {
-    @apply max-w-sm md:w-3/4 overflow-hidden bg-white;
+    @apply max-w-sm w-3/4 overflow-hidden bg-white;
 }
 
 #form-box {
@@ -150,4 +150,43 @@ input[type='radio']:checked:after {
     display: inline-block;
     visibility: visible;
     border: 2px solid white;
+}
+.glassmorphic {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .glassmorphic {
+      background: rgba(255, 255, 255, 0.05);
+    }
+}
+.glassmorphic-table {
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );   
+}
+@media (min-width: 450px) {
+    .sm-450\:text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem
+    }
+
+    .sm-450\:text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem
+    }
+}
+@font-face {
+    font-family: classic;
+    src: url("../fonts/ClassicRobotItalic.ttf");
+}
+.font-classic {
+    font-family: classic
+}
+@media (min-width: 935px) {
+.md\:grid-cols-3-auto {
+    grid-template-columns: auto auto auto
+}
 }

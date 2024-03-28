@@ -8,21 +8,21 @@ const SportsRules = () => {
 					<div className="p-4">
 						<h2 className="text-3xl font-semibold text-gray-800">{sport.name}</h2>
 						{sport.rules && <><h3 className="text-2xl font-medium text-gray-600 mt-4">RULES</h3>
-						<ol className="list-decimal list-inside text-gray-700 mt-2">
-							{sport.rules.map((point) => (
-								<li key={point} className="mt-1">{point}</li>
-							))}
-						</ol>
+							<ol className="list-decimal list-inside text-gray-700 mt-2">
+								{sport.rules.map((point) => (
+									<li key={point} className="mt-1">{point}</li>
+								))}
+							</ol>
 						</>}
 						{sport.points && <><h3 className="text-2xl font-medium text-gray-600 mt-4">Points to Remember</h3>
-						<ol className="list-disc list-inside text-gray-700 mt-2">
-							{sport.points.map((point) => (
-								<li key={point} className="mt-1">{point}</li>
-							))}
-						</ol>
+							<ol className="list-disc list-inside text-gray-700 mt-2">
+								{sport.points.map((point) => (
+									<li key={point} className="mt-1">{point}</li>
+								))}
+							</ol>
 						</>}
 						{sport.ground && <>
-						<h3 className="text-2xl font-medium text-gray-600 mt-4">Ground Requirements</h3>
+							<h3 className="text-2xl font-medium text-gray-600 mt-4">Ground Requirements</h3>
 							<ol className="list-disc list-inside text-gray-700 mt-2">
 								{sport.ground.map((requirement) => (
 									<li key={requirement} className="mt-1">

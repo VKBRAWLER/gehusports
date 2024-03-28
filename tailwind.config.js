@@ -10,7 +10,8 @@ module.exports = {
       boxShadow: {
         '3xl': '10px 10px 3px 0 rgba(0, 0, 0, 0.8)',
         '4xl': '30px 30px 3px 0 rgba(0, 0, 0, 0.8)',
-      }
+      },
+      
     },
   },
   plugins: [],

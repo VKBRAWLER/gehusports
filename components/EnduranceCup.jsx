@@ -1,6 +1,6 @@
-import Content from './Content';
+import Content from '@components/Content';
 import Link from 'next/link';
-const EnduranceCup = () => {
+const EnduranceCupPage = () => {
   return (
     <div className='absolute z-0 top-0 right-0 left-0 h-[60vh] flex flex-wrap justify-center'>
       <video className='object-cover w-full h-full' src={Content.DroneBG} autoPlay muted loop />
@@ -14,4 +14,4 @@ const EnduranceCup = () => {
   )
 }
 
-export default EnduranceCup;
+export default EnduranceCupPage;

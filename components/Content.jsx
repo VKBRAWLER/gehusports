@@ -1,6 +1,6 @@
 const Content = {
     currentStatus: 'UPCOMING',
-    DroneBG: 'https://cdn.discordapp.com/attachments/1162451241872412902/1164445349147054131/drone.mp4?ex=65433d3d&is=6530c83d&hm=3b8cb22447eed598759621bddfc8097b8627a24d897623c3c2e172c1bc431301&',
+    DroneBG: 'https://cdn.discordapp.com/attachments/1162451241872412902/1164445349147054131/drone.mp4?ex=660509bd&is=65f294bd&hm=77d2a51f9f1409bd402f924ffe713f33c1bd1c4d2ac1e2119c12582025d3b740&',
     gehulogo: "https://th.bing.com/th/id/R.a41d23250be5b1cfa015aab47ac8e5ae?rik=Wb6nyP4jZ1e65A&riu=http%3a%2f%2f2021.ictsci.in%2fimages%2fclients%2fgraphic-era.png&ehk=hFqvwBMhMQ6x9iG%2f0w1CWdIOVDRn6gtg0a%2bTb%2fRoJzA%3d&risl=&pid=ImgRaw&r=0",
     sportslogo: "https://cdn.discordapp.com/attachments/1163848747504124019/1164448619907272815/gs_logo.png?ex=65434049&is=6530cb49&hm=784094c8febc84b8cc2e02dc7afd4212ed4f13255757478095e4049c11b4b136&",
     akkida: 'https://media.discordapp.net/attachments/1163848747504124019/1164445838030934106/pp.png?ex=654c7832&is=653a0332&hm=4f666d6c89d47bf08d1ac838494d93a6f23e50d3c9b67726eed75a18f16c1a9c&=&width=696&height=702',
@@ -74,7 +74,7 @@ const Content = {
             name: "ArmWrestling",
             rules: [
                 "Those  student  who's  arm wrestling  match  on Monday should came in Gehu t-shirt , lower & sports shoes.",
-                "Refrees decision will  consider as a final decision.",                
+                "Refrees decision will  consider as a final decision.",
                 "There will be 3 rounds who will  win 2 rounds that player won the match.",
                 "Type of tournament is knock out.",
                 "Type of tournament is knock out.",

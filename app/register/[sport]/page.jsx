@@ -38,7 +38,7 @@ const RegistrationForm = ({ params }) => {
 			setTextcolor('black');
 		}
 	}, [])
-	if (params.sport.toLowerCase() === 'notfound'){return (
+	if (params.sport.toLowerCase() === 'armwrestling'){return (
 		<>
 			<FullScreenVideo link={sportsBGVideo} type={'fixedbgvideo'} />
 			<main className='flex flex-wrap justify-center items-center relative z-10'>

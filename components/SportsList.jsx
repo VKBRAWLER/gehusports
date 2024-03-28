@@ -19,11 +19,11 @@ const SportsList = (params) => {
 									<>
 										<div>
 											<p className='text-sm'>Time Remaining: </p>
-											<Timer targetTime={params.status==="ONGOING"?i.Edate:i.Sdate} />
+											<Timer targetTime={params.status === "ONGOING" ? i.Edate : i.Sdate} />
 										</div>
-										{params.status==="ONGOING"?
-										<Link href={`/rules/#${i.Name}`} className='bg-blue-400 p-2 rounded-xl'>Rules</Link>
-										:<Link href={`/register/${i.Name}`} className='bg-blue-400 p-2 rounded-xl'>Register</Link>}
+										{params.status === "ONGOING" ?
+											<Link href={`/rules/#${i.Name}`} className='bg-blue-400 p-2 rounded-xl'>Rules</Link>
+											: <Link href={`/register/${i.Name}`} className='bg-blue-400 p-2 rounded-xl'>Register</Link>}
 									</>
 									: <div className='font-bold text-lg'>Comming Soon ...</div>
 								}
