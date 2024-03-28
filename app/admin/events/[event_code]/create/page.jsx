@@ -38,7 +38,6 @@ const CreateSportsPage = () => {
   }
   const updateSportDetails = (e) => {
     setSportDetails({ ...sportDetails, [e.target.id]: e.target.value });
-    console.log(sportDetails);
   }
   useEffect(() => {
     SearchEvent_code();

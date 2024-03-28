@@ -7,7 +7,6 @@ const ArticleBox = (j) => {
 	const [span, setspan] = useState("?? / ?? / ????");
 	const [reg, setReg] = useState(false);
 	const upadateArticles = (j) => {
-		// console.log(j);
 		setReg(j.register_link);
 		if (j.start_date) {
 			const Sdate = new Date(j.start_date);

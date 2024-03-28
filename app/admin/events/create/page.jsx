@@ -11,7 +11,6 @@ const EventCreatePage = () => {
 	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', created_by: session?.user.user_code });
 	const updateEventDetails = (e) => {
 		if (e) setEventDetails({ ...eventDetails, [e.target.id]: e.target.value });
-		console.log(eventDetails);
 	}
   const saveChanges = async () => {
 		let newReqBody = {};

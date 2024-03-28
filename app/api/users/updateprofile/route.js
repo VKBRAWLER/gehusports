@@ -8,7 +8,6 @@ export async function PUT(NextRequest) {
   try {
     const reqBody = await NextRequest.json();
     const { name, image, user_code } = reqBody;
-    console.log(reqBody);
     if (!user_code) return NextResponse.json({ error: 'User code not found', success: false }, { status: 400 });
     const userExist = await User.findOne({ user_code });
     if (!userExist) return NextResponse.json({ error: 'User not found', success: false }, { status: 404 });

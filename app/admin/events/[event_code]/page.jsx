@@ -21,7 +21,6 @@ const AdminsEventsPageParams = () => {
 	const [eventDetails, setEventDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code, _id: event_code });
 	const updateEventDetails = (e) => {
 		if (e) setEventDetails({ ...eventDetails, [e.target.id]: e.target.value });
-		console.log(eventDetails);
 	}
 	const SearchEvent_code = async (event_code) => {
 		const response = await fetch(`/api/events/${event_code}`);

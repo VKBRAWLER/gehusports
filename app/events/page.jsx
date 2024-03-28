@@ -19,7 +19,6 @@ const EventsPage = () => {
 				}
 			});
 		setEvents(sortedEvents);
-		console.log(sortedEvents);
 	}
 
 	useEffect(() => {

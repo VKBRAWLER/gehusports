@@ -18,7 +18,6 @@ const AdminsSportsPage = () => {
   const [sportDetails, setSportDetails] = useState({ title: '', start_date: '', end_date: '', poster_image: '', last_updated_by: session?.user.user_code, event_code: event_code, _id: sport_code });
   const updateSportDetails = (e) => {
     setSportDetails({ ...sportDetails, [e.target.id]: e.target.value });
-    // console.log(sportDetails);
   }
   const SearchEvent_code = async () => {
     const response = await fetch(`/api/events/${event_code}`);

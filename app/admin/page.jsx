@@ -5,7 +5,6 @@ import Provider from "@components/Provider";
 import Link from "next/link";
 const AdminPage = () => {
   const { data: session } = useSession();
-  console.log(session)
 
   return (
     session &&
