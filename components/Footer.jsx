@@ -10,27 +10,27 @@ const Footer = () => {
                 <ul className="mx-5">
                     <li className='cursor-pointer'><Link href={`/`}>HomePage</Link></li>
                     <li className='cursor-pointer'><Link href={`/events`}>EventPage</Link></li>
-                    <li className='cursor-pointer'><Link href={`/rules`}>RulesPage</Link></li>
+                    <li className='cursor-pointer'><Link href={`/admin`}>AdminPage</Link></li>
                 </ul>
             </div>
             <div>
                 <h2 className="text-lg sm-450:text-2xl font-bold text-right md:text-left">Contact Organizers</h2>
                 <ul className="mx-5 text-right md:text-left">
                     <li>+91 9456790295</li>
-                    <li>+91 9412129175</li>
+                    <li>+91 9456790295</li>
                     <li>varunkh12345@gmail.com</li>
                 </ul>
             </div>
             <div>
                 <h2 className="text-lg sm-450:text-2xl font-bold">Developer's Contact</h2>
                 <ul className="mx-5 ">
-                    <li>www.bakerheavans/googlemaps.com</li>
-                    <li>www.bakerhaven/onlinemenu.com</li>
-                    <li>www/bakershaven/thiswebsite.com</li>
+                    <li>https://github.com/VKbrawler</li>
+                    <li>+91 9456790295</li>
+                    <li>varunkh12345@gmail.com</li>
                 </ul>
             </div>
         </div>
-        <h6 className="text-center italic absolute bottom-1 right-4 text-sm">@Copywrite-BakersHeaven 2023</h6>
+        <h6 className="text-center italic absolute bottom-1 right-4 text-sm">@Copywrite-GehuSports 2024</h6>
     </footer>
   )
 }

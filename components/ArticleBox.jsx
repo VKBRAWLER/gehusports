@@ -1,6 +1,5 @@
 import { calculateTimeLeft, DateString, TimeString } from "@utils/Time";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 const ArticleBox = (j) => {
 	j = j.obj;
 	const [h1, seth1] = useState("Comming Soon...");
